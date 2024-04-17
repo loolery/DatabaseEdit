@@ -3,8 +3,8 @@ F:\Repos\loolery\Editor\bin\Debug\Editor.exe
 F:\Repos\loolery\Editor\bin\Debug\Editor.pdb
 F:\Repos\loolery\Editor\obj\Debug\Editor.csproj.AssemblyReference.cache
 F:\Repos\loolery\Editor\obj\Debug\Editor.Form1.resources
-F:\Repos\loolery\Editor\obj\Debug\Editor.Properties.Resources.resources
 F:\Repos\loolery\Editor\obj\Debug\Editor.csproj.GenerateResource.cache
 F:\Repos\loolery\Editor\obj\Debug\Editor.csproj.CoreCompileInputs.cache
 F:\Repos\loolery\Editor\obj\Debug\Editor.exe
 F:\Repos\loolery\Editor\obj\Debug\Editor.pdb
+F:\Repos\loolery\Editor\obj\Debug\Editor.g.resources
