@@ -70,12 +70,16 @@ namespace Editor
                 sqlcmd = sqldb.CreateCommand();
                 sqlcmd.CommandText = "SELECT * FROM tbl_land";
                 sqlreader = sqlcmd.ExecuteReader();
+                List<Laender> laenderauswahl = new List<Laender>();
                 while (sqlreader.Read())
                 {
                     // optional auch auslesen mit sqlreader.GetValue(0);
-                    OutputText += sqlreader["ID"].ToString() + " '" + sqlreader["Name"].ToString() + "' " + "\n";
+                    // OutputText += sqlreader["ID"].ToString() + " '" + sqlreader["Name"].ToString() + "' " + "\n";
+                    laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3) });
                 }
-                MessageBox.Show(OutputText);
+                cbolaender.DataSource = laenderauswahl;
+                cbolaender.ValueMember = "Id";
+                cbolaender.DisplayMember = "Name";  
             }
         }
 
@@ -84,5 +88,22 @@ namespace Editor
 
         }
 
+        private void cbolaender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Laender obj = cbolaender.SelectedItem as Laender;
+            if(obj != null)
+                txtboxlandname.Text = obj.Name;
+                txtboxlandeinwohner.Text = obj.Einwohner.ToString();
+        }
+
+        private void cbolaender_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbllandeinwohner_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

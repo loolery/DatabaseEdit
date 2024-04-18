@@ -35,10 +35,12 @@
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtboxlandname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbolaender = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboligaauswahl = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -50,7 +52,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lbllandeinwohner = new System.Windows.Forms.Label();
+            this.txtboxlandeinwohner = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -79,7 +84,7 @@
             // öffnenToolStripMenuItem
             // 
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
-            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.öffnenToolStripMenuItem.Text = "Öffnen...";
             this.öffnenToolStripMenuItem.Click += new System.EventHandler(this.btnOpen_Click);
             // 
@@ -99,6 +104,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtboxlandeinwohner);
+            this.groupBox1.Controls.Add(this.lbllandeinwohner);
+            this.groupBox1.Controls.Add(this.txtboxlandname);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(8, 83);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(230, 109);
@@ -107,9 +116,25 @@
             this.groupBox1.Text = "Länder Daten:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtboxlandname
+            // 
+            this.txtboxlandname.Location = new System.Drawing.Point(73, 22);
+            this.txtboxlandname.Name = "txtboxlandname";
+            this.txtboxlandname.Size = new System.Drawing.Size(151, 20);
+            this.txtboxlandname.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbolaender);
             this.groupBox2.Location = new System.Drawing.Point(8, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(230, 50);
@@ -118,17 +143,19 @@
             this.groupBox2.Text = "Länder auswahl:";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // comboBox1
+            // cbolaender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbolaender.FormattingEnabled = true;
+            this.cbolaender.Location = new System.Drawing.Point(6, 19);
+            this.cbolaender.Name = "cbolaender";
+            this.cbolaender.Size = new System.Drawing.Size(218, 21);
+            this.cbolaender.TabIndex = 0;
+            this.cbolaender.SelectedIndexChanged += new System.EventHandler(this.cbolaender_SelectedIndexChanged);
+            this.cbolaender.SelectionChangeCommitted += new System.EventHandler(this.cbolaender_SelectionChangeCommitted);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.cboligaauswahl);
             this.groupBox3.Location = new System.Drawing.Point(8, 198);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(230, 50);
@@ -137,13 +164,13 @@
             this.groupBox3.Text = "Liga auswahl:";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // comboBox2
+            // cboligaauswahl
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(4, 19);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(220, 21);
-            this.comboBox2.TabIndex = 0;
+            this.cboligaauswahl.FormattingEnabled = true;
+            this.cboligaauswahl.Location = new System.Drawing.Point(4, 19);
+            this.cboligaauswahl.Name = "cboligaauswahl";
+            this.cboligaauswahl.Size = new System.Drawing.Size(220, 21);
+            this.cboligaauswahl.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -257,6 +284,23 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Spieler Daten:";
             // 
+            // lbllandeinwohner
+            // 
+            this.lbllandeinwohner.AutoSize = true;
+            this.lbllandeinwohner.Location = new System.Drawing.Point(7, 56);
+            this.lbllandeinwohner.Name = "lbllandeinwohner";
+            this.lbllandeinwohner.Size = new System.Drawing.Size(60, 13);
+            this.lbllandeinwohner.TabIndex = 2;
+            this.lbllandeinwohner.Text = "Einwohner:";
+            this.lbllandeinwohner.Click += new System.EventHandler(this.lbllandeinwohner_Click);
+            // 
+            // txtboxlandeinwohner
+            // 
+            this.txtboxlandeinwohner.Location = new System.Drawing.Point(73, 49);
+            this.txtboxlandeinwohner.Name = "txtboxlandeinwohner";
+            this.txtboxlandeinwohner.Size = new System.Drawing.Size(151, 20);
+            this.txtboxlandeinwohner.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +325,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -307,12 +353,16 @@
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbolaender;
+        private System.Windows.Forms.ComboBox cboligaauswahl;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtboxlandname;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtboxlandeinwohner;
+        private System.Windows.Forms.Label lbllandeinwohner;
     }
 }
 
