@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "F:\\Repos\\loolery\\Editor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|f:\\repos\\loolery\\editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|f:\\repos\\loolery\\editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|f:\\repos\\loolery\\editor\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "F:\\Repos\\loolery\\Editor\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-04-17T15:59:28.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "F:\\Repos\\loolery\\Editor\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAApwC4AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T16:04:26.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Form1.cs [Entwurf]",
               "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "F:\\Repos\\loolery\\Editor\\Form1.cs [Entwurf]",
               "RelativeToolTip": "Form1.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T16:01:30.432Z",
+              "WhenOpened": "2024-04-18T09:03:59.078Z",
               "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "F:\\Repos\\loolery\\Editor\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAwEoAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T16:04:26.244Z",
+              "EditorCaption": ""
             }
           ]
         }
