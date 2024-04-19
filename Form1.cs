@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace Editor
 {
@@ -56,8 +57,6 @@ namespace Editor
             SQLiteConnection sqldb;
             SQLiteCommand sqlcmd = null;
             SQLiteDataReader sqlreader = null;
-            String OutputText = "";
-
             if (!File.Exists(dbfile))
             {
                 MessageBox.Show("Die Datenbank'" + dbfile + "'ist leider nicht vorhanden.");
@@ -75,7 +74,16 @@ namespace Editor
                 {
                     // optional auch auslesen mit sqlreader.GetValue(0);
                     // OutputText += sqlreader["ID"].ToString() + " '" + sqlreader["Name"].ToString() + "' " + "\n";
-                    laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3) });
+                    string tmid;
+                    if (sqlreader["Tm_Id"] is null)
+                    {
+                        tmid = "null";
+                    }
+                    else
+                    {
+                        tmid = (string)sqlreader.GetString(7);
+                    }
+                    laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3), Hauptstadt = sqlreader.GetString(4), Fahne = sqlreader.GetString(5), Tm_Id = tmid });
                 }
                 cbolaender.DataSource = laenderauswahl;
                 cbolaender.ValueMember = "Id";
@@ -90,10 +98,15 @@ namespace Editor
 
         private void cbolaender_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Laender obj = cbolaender.SelectedItem as Laender;
-            if(obj != null)
-                txtboxlandname.Text = obj.Name;
-                txtboxlandeinwohner.Text = obj.Einwohner.ToString();
+            Laender objLand = cbolaender.SelectedItem as Laender;
+            if(objLand != null)
+                txtboxlandname.Text = objLand.Name.ToString();
+                txtboxlandeinwohner.Text = objLand.Einwohner.ToString();
+                txtboxenglish.Text = objLand.Name2.ToString();
+                txtboxfahne.Text = objLand.Fahne.ToString();
+                txtboxhauptstadt.Text = objLand.Hauptstadt.ToString();
+                txtboxfifapunkte.Text = objLand.FifaPunkte.ToString();
+                txtboxtransfermarktid.Text =objLand.Tm_Id.ToString();
         }
 
         private void cbolaender_SelectionChangeCommitted(object sender, EventArgs e)
