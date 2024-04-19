@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 using System.IO;
 using System.Security.Cryptography;
+using System.Diagnostics;
 
 namespace Editor
 {
@@ -81,9 +82,9 @@ namespace Editor
                     }
                     else
                     {
-                        tmid = (string)sqlreader.GetString(7);
+                        tmid = (sqlreader["Tm_Id"].ToString() == null) ? string.Empty : sqlreader["Tm_Id"].ToString();
                     }
-                    laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3), Hauptstadt = sqlreader.GetString(4), Fahne = sqlreader.GetString(5), Tm_Id = tmid });
+                    laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3), Hauptstadt = sqlreader.GetString(4), Fahne = sqlreader.GetString(5), FifaPunkte = sqlreader.GetInt32(6), Tm_Id = tmid });
                 }
                 cbolaender.DataSource = laenderauswahl;
                 cbolaender.ValueMember = "Id";
@@ -103,6 +104,7 @@ namespace Editor
                 txtboxlandname.Text = objLand.Name.ToString();
                 txtboxlandeinwohner.Text = objLand.Einwohner.ToString();
                 txtboxenglish.Text = objLand.Name2.ToString();
+                picboxfahne.Load(objLand.Fahne.ToString());
                 txtboxfahne.Text = objLand.Fahne.ToString();
                 txtboxhauptstadt.Text = objLand.Hauptstadt.ToString();
                 txtboxfifapunkte.Text = objLand.FifaPunkte.ToString();
