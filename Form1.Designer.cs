@@ -35,6 +35,17 @@
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picboxfahne = new System.Windows.Forms.PictureBox();
+            this.lbltranfermarktid = new System.Windows.Forms.Label();
+            this.lblfifapunkte = new System.Windows.Forms.Label();
+            this.lblfahne = new System.Windows.Forms.Label();
+            this.txtboxtransfermarktid = new System.Windows.Forms.TextBox();
+            this.txtboxfifapunkte = new System.Windows.Forms.TextBox();
+            this.txtboxfahne = new System.Windows.Forms.TextBox();
+            this.txtboxhauptstadt = new System.Windows.Forms.TextBox();
+            this.lblhauptstadt = new System.Windows.Forms.Label();
+            this.lblname2 = new System.Windows.Forms.Label();
+            this.txtboxenglish = new System.Windows.Forms.TextBox();
             this.txtboxlandeinwohner = new System.Windows.Forms.TextBox();
             this.lbllandeinwohner = new System.Windows.Forms.Label();
             this.txtboxlandname = new System.Windows.Forms.TextBox();
@@ -42,7 +53,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbolaender = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cboligaauswahl = new System.Windows.Forms.ComboBox();
+            this.cboligen = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -54,24 +65,13 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtboxenglish = new System.Windows.Forms.TextBox();
-            this.lblname2 = new System.Windows.Forms.Label();
-            this.lblhauptstadt = new System.Windows.Forms.Label();
-            this.txtboxhauptstadt = new System.Windows.Forms.TextBox();
-            this.txtboxfahne = new System.Windows.Forms.TextBox();
-            this.txtboxfifapunkte = new System.Windows.Forms.TextBox();
-            this.txtboxtransfermarktid = new System.Windows.Forms.TextBox();
-            this.lblfahne = new System.Windows.Forms.Label();
-            this.lblfifapunkte = new System.Windows.Forms.Label();
-            this.lbltranfermarktid = new System.Windows.Forms.Label();
-            this.picboxfahne = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -139,6 +139,95 @@
             this.groupBox1.Text = "Länder Daten:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // picboxfahne
+            // 
+            this.picboxfahne.InitialImage = ((System.Drawing.Image)(resources.GetObject("picboxfahne.InitialImage")));
+            this.picboxfahne.Location = new System.Drawing.Point(73, 126);
+            this.picboxfahne.Name = "picboxfahne";
+            this.picboxfahne.Size = new System.Drawing.Size(29, 19);
+            this.picboxfahne.TabIndex = 14;
+            this.picboxfahne.TabStop = false;
+            // 
+            // lbltranfermarktid
+            // 
+            this.lbltranfermarktid.AutoSize = true;
+            this.lbltranfermarktid.Location = new System.Drawing.Point(7, 184);
+            this.lbltranfermarktid.Name = "lbltranfermarktid";
+            this.lbltranfermarktid.Size = new System.Drawing.Size(60, 13);
+            this.lbltranfermarktid.TabIndex = 13;
+            this.lbltranfermarktid.Text = "Transferm.:";
+            // 
+            // lblfifapunkte
+            // 
+            this.lblfifapunkte.AutoSize = true;
+            this.lblfifapunkte.Location = new System.Drawing.Point(7, 158);
+            this.lblfifapunkte.Name = "lblfifapunkte";
+            this.lblfifapunkte.Size = new System.Drawing.Size(64, 13);
+            this.lblfifapunkte.TabIndex = 12;
+            this.lblfifapunkte.Text = "Fifa-Punkte:";
+            // 
+            // lblfahne
+            // 
+            this.lblfahne.AutoSize = true;
+            this.lblfahne.Location = new System.Drawing.Point(7, 132);
+            this.lblfahne.Name = "lblfahne";
+            this.lblfahne.Size = new System.Drawing.Size(40, 13);
+            this.lblfahne.TabIndex = 11;
+            this.lblfahne.Text = "Fahne:";
+            // 
+            // txtboxtransfermarktid
+            // 
+            this.txtboxtransfermarktid.Location = new System.Drawing.Point(73, 177);
+            this.txtboxtransfermarktid.Name = "txtboxtransfermarktid";
+            this.txtboxtransfermarktid.Size = new System.Drawing.Size(165, 20);
+            this.txtboxtransfermarktid.TabIndex = 10;
+            // 
+            // txtboxfifapunkte
+            // 
+            this.txtboxfifapunkte.Location = new System.Drawing.Point(73, 151);
+            this.txtboxfifapunkte.Name = "txtboxfifapunkte";
+            this.txtboxfifapunkte.Size = new System.Drawing.Size(165, 20);
+            this.txtboxfifapunkte.TabIndex = 9;
+            // 
+            // txtboxfahne
+            // 
+            this.txtboxfahne.Location = new System.Drawing.Point(108, 125);
+            this.txtboxfahne.Name = "txtboxfahne";
+            this.txtboxfahne.Size = new System.Drawing.Size(130, 20);
+            this.txtboxfahne.TabIndex = 8;
+            // 
+            // txtboxhauptstadt
+            // 
+            this.txtboxhauptstadt.Location = new System.Drawing.Point(73, 99);
+            this.txtboxhauptstadt.Name = "txtboxhauptstadt";
+            this.txtboxhauptstadt.Size = new System.Drawing.Size(165, 20);
+            this.txtboxhauptstadt.TabIndex = 7;
+            // 
+            // lblhauptstadt
+            // 
+            this.lblhauptstadt.AutoSize = true;
+            this.lblhauptstadt.Location = new System.Drawing.Point(7, 106);
+            this.lblhauptstadt.Name = "lblhauptstadt";
+            this.lblhauptstadt.Size = new System.Drawing.Size(62, 13);
+            this.lblhauptstadt.TabIndex = 6;
+            this.lblhauptstadt.Text = "Hauptstadt:";
+            // 
+            // lblname2
+            // 
+            this.lblname2.AutoSize = true;
+            this.lblname2.Location = new System.Drawing.Point(7, 55);
+            this.lblname2.Name = "lblname2";
+            this.lblname2.Size = new System.Drawing.Size(44, 13);
+            this.lblname2.TabIndex = 5;
+            this.lblname2.Text = "English:";
+            // 
+            // txtboxenglish
+            // 
+            this.txtboxenglish.Location = new System.Drawing.Point(73, 48);
+            this.txtboxenglish.Name = "txtboxenglish";
+            this.txtboxenglish.Size = new System.Drawing.Size(165, 20);
+            this.txtboxenglish.TabIndex = 4;
+            // 
             // txtboxlandeinwohner
             // 
             this.txtboxlandeinwohner.Location = new System.Drawing.Point(73, 74);
@@ -154,7 +243,6 @@
             this.lbllandeinwohner.Size = new System.Drawing.Size(60, 13);
             this.lbllandeinwohner.TabIndex = 2;
             this.lbllandeinwohner.Text = "Einwohner:";
-            this.lbllandeinwohner.Click += new System.EventHandler(this.lbllandeinwohner_Click);
             // 
             // txtboxlandname
             // 
@@ -191,11 +279,10 @@
             this.cbolaender.Size = new System.Drawing.Size(235, 21);
             this.cbolaender.TabIndex = 0;
             this.cbolaender.SelectedIndexChanged += new System.EventHandler(this.cbolaender_SelectedIndexChanged);
-            this.cbolaender.SelectionChangeCommitted += new System.EventHandler(this.cbolaender_SelectionChangeCommitted);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cboligaauswahl);
+            this.groupBox3.Controls.Add(this.cboligen);
             this.groupBox3.Location = new System.Drawing.Point(8, 299);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(245, 50);
@@ -204,13 +291,14 @@
             this.groupBox3.Text = "Liga auswahl:";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // cboligaauswahl
+            // cboligen
             // 
-            this.cboligaauswahl.FormattingEnabled = true;
-            this.cboligaauswahl.Location = new System.Drawing.Point(4, 19);
-            this.cboligaauswahl.Name = "cboligaauswahl";
-            this.cboligaauswahl.Size = new System.Drawing.Size(235, 21);
-            this.cboligaauswahl.TabIndex = 0;
+            this.cboligen.FormattingEnabled = true;
+            this.cboligen.Location = new System.Drawing.Point(4, 19);
+            this.cboligen.Name = "cboligen";
+            this.cboligen.Size = new System.Drawing.Size(235, 21);
+            this.cboligen.TabIndex = 0;
+            this.cboligen.SelectedIndexChanged += new System.EventHandler(this.cboligaauswahl_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -324,96 +412,6 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Spieler Daten:";
             // 
-            // txtboxenglish
-            // 
-            this.txtboxenglish.Location = new System.Drawing.Point(73, 48);
-            this.txtboxenglish.Name = "txtboxenglish";
-            this.txtboxenglish.Size = new System.Drawing.Size(165, 20);
-            this.txtboxenglish.TabIndex = 4;
-            // 
-            // lblname2
-            // 
-            this.lblname2.AutoSize = true;
-            this.lblname2.Location = new System.Drawing.Point(7, 55);
-            this.lblname2.Name = "lblname2";
-            this.lblname2.Size = new System.Drawing.Size(44, 13);
-            this.lblname2.TabIndex = 5;
-            this.lblname2.Text = "English:";
-            // 
-            // lblhauptstadt
-            // 
-            this.lblhauptstadt.AutoSize = true;
-            this.lblhauptstadt.Location = new System.Drawing.Point(7, 106);
-            this.lblhauptstadt.Name = "lblhauptstadt";
-            this.lblhauptstadt.Size = new System.Drawing.Size(62, 13);
-            this.lblhauptstadt.TabIndex = 6;
-            this.lblhauptstadt.Text = "Hauptstadt:";
-            // 
-            // txtboxhauptstadt
-            // 
-            this.txtboxhauptstadt.Location = new System.Drawing.Point(73, 99);
-            this.txtboxhauptstadt.Name = "txtboxhauptstadt";
-            this.txtboxhauptstadt.Size = new System.Drawing.Size(165, 20);
-            this.txtboxhauptstadt.TabIndex = 7;
-            // 
-            // txtboxfahne
-            // 
-            this.txtboxfahne.Location = new System.Drawing.Point(108, 125);
-            this.txtboxfahne.Name = "txtboxfahne";
-            this.txtboxfahne.Size = new System.Drawing.Size(130, 20);
-            this.txtboxfahne.TabIndex = 8;
-            // 
-            // txtboxfifapunkte
-            // 
-            this.txtboxfifapunkte.Location = new System.Drawing.Point(73, 151);
-            this.txtboxfifapunkte.Name = "txtboxfifapunkte";
-            this.txtboxfifapunkte.Size = new System.Drawing.Size(165, 20);
-            this.txtboxfifapunkte.TabIndex = 9;
-            // 
-            // txtboxtransfermarktid
-            // 
-            this.txtboxtransfermarktid.Location = new System.Drawing.Point(73, 177);
-            this.txtboxtransfermarktid.Name = "txtboxtransfermarktid";
-            this.txtboxtransfermarktid.Size = new System.Drawing.Size(165, 20);
-            this.txtboxtransfermarktid.TabIndex = 10;
-            // 
-            // lblfahne
-            // 
-            this.lblfahne.AutoSize = true;
-            this.lblfahne.Location = new System.Drawing.Point(7, 132);
-            this.lblfahne.Name = "lblfahne";
-            this.lblfahne.Size = new System.Drawing.Size(40, 13);
-            this.lblfahne.TabIndex = 11;
-            this.lblfahne.Text = "Fahne:";
-            // 
-            // lblfifapunkte
-            // 
-            this.lblfifapunkte.AutoSize = true;
-            this.lblfifapunkte.Location = new System.Drawing.Point(7, 158);
-            this.lblfifapunkte.Name = "lblfifapunkte";
-            this.lblfifapunkte.Size = new System.Drawing.Size(64, 13);
-            this.lblfifapunkte.TabIndex = 12;
-            this.lblfifapunkte.Text = "Fifa-Punkte:";
-            // 
-            // lbltranfermarktid
-            // 
-            this.lbltranfermarktid.AutoSize = true;
-            this.lbltranfermarktid.Location = new System.Drawing.Point(7, 184);
-            this.lbltranfermarktid.Name = "lbltranfermarktid";
-            this.lbltranfermarktid.Size = new System.Drawing.Size(60, 13);
-            this.lbltranfermarktid.TabIndex = 13;
-            this.lbltranfermarktid.Text = "Transferm.:";
-            // 
-            // picboxfahne
-            // 
-            this.picboxfahne.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picboxfahne.BackgroundImage")));
-            this.picboxfahne.InitialImage = ((System.Drawing.Image)(resources.GetObject("picboxfahne.InitialImage")));
-            this.picboxfahne.Location = new System.Drawing.Point(73, 126);
-            this.picboxfahne.Name = "picboxfahne";
-            this.picboxfahne.Size = new System.Drawing.Size(29, 19);
-            this.picboxfahne.TabIndex = 14;
-            this.picboxfahne.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,11 +438,11 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,7 +466,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.ComboBox cbolaender;
-        private System.Windows.Forms.ComboBox cboligaauswahl;
+        private System.Windows.Forms.ComboBox cboligen;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.GroupBox groupBox8;

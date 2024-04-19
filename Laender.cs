@@ -19,4 +19,20 @@ namespace Editor
 
 
     }
+    public class Ligen
+    {
+        public int Id { get; set; }
+        public int Land_Id { get; set; }    
+        public int Rang {  get; set; }  
+        public string Name {  set; get; }
+        public int Groesse { get; set; }
+        public string BildURL { get; set; }
+        public string Tm_Link { set; get; }
+
+    }
+    public class vereine
+    {
+        public int Id { get; set; }
+
+    }
 }

@@ -12,11 +12,20 @@ using Microsoft.Data.Sqlite;
 using System.IO;
 using System.Security.Cryptography;
 using System.Diagnostics;
+//using static System.Net.WebRequestMethods;
+using System.Net.NetworkInformation;
 
 namespace Editor
 {
     public partial class Form1 : Form
-    {
+    {   
+        // SQLite DB vorbereitungen für die Events
+        public static string dbfile = AppDomain.CurrentDomain.BaseDirectory + "test.db3";
+        public static string connectionString = "Data Source=" + dbfile + ";Version=3;";
+        public static SQLiteConnection sqldb;
+        public static SQLiteCommand sqlcmd = null;
+        public static SQLiteDataReader sqlreader = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -54,17 +63,12 @@ namespace Editor
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            string dbfile = AppDomain.CurrentDomain.BaseDirectory + "test.db3";
-            SQLiteConnection sqldb;
-            SQLiteCommand sqlcmd = null;
-            SQLiteDataReader sqlreader = null;
             if (!File.Exists(dbfile))
             {
-                MessageBox.Show("Die Datenbank'" + dbfile + "'ist leider nicht vorhanden.");
+                MessageBox.Show("Die Datenbank '" + dbfile + "' ist leider nicht vorhanden.");
             }
             else
             {
-                string connectionString = "Data Source=" + dbfile + ";Version=3;";
                 sqldb = new SQLiteConnection(connectionString);
                 sqldb.Open();
                 sqlcmd = sqldb.CreateCommand();
@@ -73,8 +77,6 @@ namespace Editor
                 List<Laender> laenderauswahl = new List<Laender>();
                 while (sqlreader.Read())
                 {
-                    // optional auch auslesen mit sqlreader.GetValue(0);
-                    // OutputText += sqlreader["ID"].ToString() + " '" + sqlreader["Name"].ToString() + "' " + "\n";
                     string tmid;
                     if (sqlreader["Tm_Id"] is null)
                     {
@@ -86,6 +88,7 @@ namespace Editor
                     }
                     laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3), Hauptstadt = sqlreader.GetString(4), Fahne = sqlreader.GetString(5), FifaPunkte = sqlreader.GetInt32(6), Tm_Id = tmid });
                 }
+                sqldb.Close();
                 cbolaender.DataSource = laenderauswahl;
                 cbolaender.ValueMember = "Id";
                 cbolaender.DisplayMember = "Name";  
@@ -94,7 +97,7 @@ namespace Editor
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            // speichert alles
         }
 
         private void cbolaender_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,14 +112,26 @@ namespace Editor
                 txtboxhauptstadt.Text = objLand.Hauptstadt.ToString();
                 txtboxfifapunkte.Text = objLand.FifaPunkte.ToString();
                 txtboxtransfermarktid.Text =objLand.Tm_Id.ToString();
+
+            sqldb = new SQLiteConnection(connectionString);
+            sqldb.Open();
+            sqlcmd = null;
+            sqlcmd = sqldb.CreateCommand();
+            sqlcmd.CommandText = "SELECT * FROM tbl_ligen WHERE Land_ID = " + objLand.Id.ToString();
+            sqlreader = sqlcmd.ExecuteReader();
+            List<Ligen> ligenauswahl = new List<Ligen>();
+            while (sqlreader.Read())
+            {
+                ligenauswahl.Add(new Ligen() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Rang = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Groesse = sqlreader.GetInt32(4), BildURL = sqlreader.GetString(5), Tm_Link = sqlreader.GetString(6) });
+            }
+            sqldb.Close(); 
+            cboligen.DataSource = ligenauswahl;
+            cboligen.ValueMember = "Id";
+            cboligen.DisplayMember = "Name";
+
         }
 
-        private void cbolaender_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbllandeinwohner_Click(object sender, EventArgs e)
+        private void cboligaauswahl_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
