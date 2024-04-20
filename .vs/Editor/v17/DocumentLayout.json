@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\",
+  "WorkspaceRootPath": "F:\\Repos\\loolery\\Editor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|f:\\repos\\loolery\\editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|l:\\#download\\coden\\#c#\\databaseedit\\laender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:laender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Laender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Laender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Laender.cs",
-              "DocumentMoniker": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Laender.cs",
+              "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Laender.cs",
               "RelativeDocumentMoniker": "Laender.cs",
-              "ToolTip": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Laender.cs",
+              "ToolTip": "F:\\Repos\\loolery\\Editor\\Laender.cs",
               "RelativeToolTip": "Laender.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T20:38:31.806Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -72,24 +71,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Form1.cs",
+              "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Form1.cs",
+              "ToolTip": "F:\\Repos\\loolery\\Editor\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAuwHcAAABkAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAuwH4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T16:04:26.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Entwurf]",
-              "DocumentMoniker": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Form1.cs",
+              "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Form1.cs [Entwurf]",
+              "ToolTip": "F:\\Repos\\loolery\\Editor\\Form1.cs [Entwurf]",
               "RelativeToolTip": "Form1.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T09:03:59.078Z",
@@ -99,11 +98,11 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Form1.Designer.cs",
+              "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "L:\\#Download\\CODEN\\#C#\\DatabaseEdit\\Form1.Designer.cs",
+              "ToolTip": "F:\\Repos\\loolery\\Editor\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AQIAAMsAAAAAAAAAAAAUwBgBAAByAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T20:24:01.572Z",
               "EditorCaption": ""

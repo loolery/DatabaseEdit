@@ -65,13 +65,30 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblliganame = new System.Windows.Forms.Label();
+            this.txtboxliganame = new System.Windows.Forms.TextBox();
+            this.txtboxligarang = new System.Windows.Forms.TextBox();
+            this.txtboxligagroesse = new System.Windows.Forms.TextBox();
+            this.txtboxligalogo = new System.Windows.Forms.TextBox();
+            this.lblligarang = new System.Windows.Forms.Label();
+            this.lblligagroesse = new System.Windows.Forms.Label();
+            this.lblligalogo = new System.Windows.Forms.Label();
+            this.picboxliga = new System.Windows.Forms.PictureBox();
+            this.lblligaland = new System.Windows.Forms.Label();
+            this.picboxligaland = new System.Windows.Forms.PictureBox();
+            this.txtboxligaland = new System.Windows.Forms.TextBox();
+            this.txtboxligatransfermarktid = new System.Windows.Forms.TextBox();
+            this.lblligatranfermarktid = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxliga)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxligaland)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -302,6 +319,20 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lblligatranfermarktid);
+            this.groupBox4.Controls.Add(this.txtboxligatransfermarktid);
+            this.groupBox4.Controls.Add(this.txtboxligaland);
+            this.groupBox4.Controls.Add(this.picboxligaland);
+            this.groupBox4.Controls.Add(this.lblligaland);
+            this.groupBox4.Controls.Add(this.picboxliga);
+            this.groupBox4.Controls.Add(this.lblligalogo);
+            this.groupBox4.Controls.Add(this.lblligagroesse);
+            this.groupBox4.Controls.Add(this.lblligarang);
+            this.groupBox4.Controls.Add(this.txtboxligalogo);
+            this.groupBox4.Controls.Add(this.txtboxligagroesse);
+            this.groupBox4.Controls.Add(this.txtboxligarang);
+            this.groupBox4.Controls.Add(this.txtboxliganame);
+            this.groupBox4.Controls.Add(this.lblliganame);
             this.groupBox4.Location = new System.Drawing.Point(8, 355);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(245, 300);
@@ -412,6 +443,118 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Spieler Daten:";
             // 
+            // lblliganame
+            // 
+            this.lblliganame.AutoSize = true;
+            this.lblliganame.Location = new System.Drawing.Point(6, 29);
+            this.lblliganame.Name = "lblliganame";
+            this.lblliganame.Size = new System.Drawing.Size(38, 13);
+            this.lblliganame.TabIndex = 1;
+            this.lblliganame.Text = "Name:";
+            // 
+            // txtboxliganame
+            // 
+            this.txtboxliganame.Location = new System.Drawing.Point(74, 22);
+            this.txtboxliganame.Name = "txtboxliganame";
+            this.txtboxliganame.Size = new System.Drawing.Size(165, 20);
+            this.txtboxliganame.TabIndex = 2;
+            // 
+            // txtboxligarang
+            // 
+            this.txtboxligarang.Location = new System.Drawing.Point(73, 48);
+            this.txtboxligarang.Name = "txtboxligarang";
+            this.txtboxligarang.Size = new System.Drawing.Size(165, 20);
+            this.txtboxligarang.TabIndex = 3;
+            // 
+            // txtboxligagroesse
+            // 
+            this.txtboxligagroesse.Location = new System.Drawing.Point(74, 74);
+            this.txtboxligagroesse.Name = "txtboxligagroesse";
+            this.txtboxligagroesse.Size = new System.Drawing.Size(165, 20);
+            this.txtboxligagroesse.TabIndex = 4;
+            // 
+            // txtboxligalogo
+            // 
+            this.txtboxligalogo.Location = new System.Drawing.Point(108, 100);
+            this.txtboxligalogo.Name = "txtboxligalogo";
+            this.txtboxligalogo.Size = new System.Drawing.Size(130, 20);
+            this.txtboxligalogo.TabIndex = 5;
+            // 
+            // lblligarang
+            // 
+            this.lblligarang.AutoSize = true;
+            this.lblligarang.Location = new System.Drawing.Point(4, 55);
+            this.lblligarang.Name = "lblligarang";
+            this.lblligarang.Size = new System.Drawing.Size(59, 13);
+            this.lblligarang.TabIndex = 6;
+            this.lblligarang.Text = "Liga Rang:";
+            // 
+            // lblligagroesse
+            // 
+            this.lblligagroesse.AutoSize = true;
+            this.lblligagroesse.Location = new System.Drawing.Point(4, 81);
+            this.lblligagroesse.Name = "lblligagroesse";
+            this.lblligagroesse.Size = new System.Drawing.Size(60, 13);
+            this.lblligagroesse.TabIndex = 7;
+            this.lblligagroesse.Text = "Liga größe:";
+            // 
+            // lblligalogo
+            // 
+            this.lblligalogo.AutoSize = true;
+            this.lblligalogo.Location = new System.Drawing.Point(4, 107);
+            this.lblligalogo.Name = "lblligalogo";
+            this.lblligalogo.Size = new System.Drawing.Size(57, 13);
+            this.lblligalogo.TabIndex = 8;
+            this.lblligalogo.Text = "Liga Logo:";
+            // 
+            // picboxliga
+            // 
+            this.picboxliga.Location = new System.Drawing.Point(74, 100);
+            this.picboxliga.Name = "picboxliga";
+            this.picboxliga.Size = new System.Drawing.Size(28, 20);
+            this.picboxliga.TabIndex = 9;
+            this.picboxliga.TabStop = false;
+            // 
+            // lblligaland
+            // 
+            this.lblligaland.AutoSize = true;
+            this.lblligaland.Location = new System.Drawing.Point(4, 139);
+            this.lblligaland.Name = "lblligaland";
+            this.lblligaland.Size = new System.Drawing.Size(34, 13);
+            this.lblligaland.TabIndex = 10;
+            this.lblligaland.Text = "Land:";
+            // 
+            // picboxligaland
+            // 
+            this.picboxligaland.Location = new System.Drawing.Point(74, 132);
+            this.picboxligaland.Name = "picboxligaland";
+            this.picboxligaland.Size = new System.Drawing.Size(28, 20);
+            this.picboxligaland.TabIndex = 11;
+            this.picboxligaland.TabStop = false;
+            // 
+            // txtboxligaland
+            // 
+            this.txtboxligaland.Location = new System.Drawing.Point(108, 132);
+            this.txtboxligaland.Name = "txtboxligaland";
+            this.txtboxligaland.Size = new System.Drawing.Size(130, 20);
+            this.txtboxligaland.TabIndex = 12;
+            // 
+            // txtboxligatransfermarktid
+            // 
+            this.txtboxligatransfermarktid.Location = new System.Drawing.Point(73, 158);
+            this.txtboxligatransfermarktid.Name = "txtboxligatransfermarktid";
+            this.txtboxligatransfermarktid.Size = new System.Drawing.Size(165, 20);
+            this.txtboxligatransfermarktid.TabIndex = 13;
+            // 
+            // lblligatranfermarktid
+            // 
+            this.lblligatranfermarktid.AutoSize = true;
+            this.lblligatranfermarktid.Location = new System.Drawing.Point(6, 165);
+            this.lblligatranfermarktid.Name = "lblligatranfermarktid";
+            this.lblligatranfermarktid.Size = new System.Drawing.Size(60, 13);
+            this.lblligatranfermarktid.TabIndex = 14;
+            this.lblligatranfermarktid.Text = "Transferm.:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,8 +584,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picboxliga)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxligaland)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,6 +633,20 @@
         private System.Windows.Forms.TextBox txtboxfifapunkte;
         private System.Windows.Forms.TextBox txtboxfahne;
         private System.Windows.Forms.PictureBox picboxfahne;
+        private System.Windows.Forms.Label lblligalogo;
+        private System.Windows.Forms.Label lblligagroesse;
+        private System.Windows.Forms.Label lblligarang;
+        private System.Windows.Forms.TextBox txtboxligalogo;
+        private System.Windows.Forms.TextBox txtboxligagroesse;
+        private System.Windows.Forms.TextBox txtboxligarang;
+        private System.Windows.Forms.TextBox txtboxliganame;
+        private System.Windows.Forms.Label lblliganame;
+        private System.Windows.Forms.TextBox txtboxligaland;
+        private System.Windows.Forms.PictureBox picboxligaland;
+        private System.Windows.Forms.Label lblligaland;
+        private System.Windows.Forms.PictureBox picboxliga;
+        private System.Windows.Forms.Label lblligatranfermarktid;
+        private System.Windows.Forms.TextBox txtboxligatransfermarktid;
     }
 }
 
