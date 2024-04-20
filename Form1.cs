@@ -80,7 +80,7 @@ namespace Editor
                     string tmid;
                     if (sqlreader["Tm_Id"] is null)
                     {
-                        tmid = "null";
+                        tmid = "9999";
                     }
                     else
                     {
@@ -104,6 +104,7 @@ namespace Editor
         {
             Laender objLand = cbolaender.SelectedItem as Laender;
             if(objLand != null)
+                txtboxlandid.Text = objLand.Id.ToString();
                 txtboxlandname.Text = objLand.Name.ToString();
                 txtboxlandeinwohner.Text = objLand.Einwohner.ToString();
                 txtboxenglish.Text = objLand.Name2.ToString();
@@ -122,7 +123,7 @@ namespace Editor
             List<Ligen> ligenauswahl = new List<Ligen>();
             while (sqlreader.Read())
             {
-                ligenauswahl.Add(new Ligen() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Rang = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Groesse = sqlreader.GetInt32(4), BildURL = sqlreader.GetString(5), Tm_Link = sqlreader.GetString(6) });
+                ligenauswahl.Add(new Ligen() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Rang = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Groesse = sqlreader.GetInt32(4), BildURL = sqlreader.GetString(5), Tm_Link = sqlreader.GetString(6), LandURL = objLand.Fahne });
             }
             sqldb.Close(); 
             cboligen.DataSource = ligenauswahl;
@@ -133,7 +134,18 @@ namespace Editor
 
         private void cboligaauswahl_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Ligen objLiga = cboligen.SelectedItem as Ligen;
+            if(objLiga != null)
+            {
+                txtboxliganame.Text = objLiga.Name.ToString();
+                txtboxligarang.Text = objLiga.Rang.ToString();
+                txtboxligagroesse.Text = objLiga.Groesse.ToString();
+                picboxliga.Load(objLiga.BildURL.ToString());
+                txtboxligalogo.Text = objLiga.BildURL.ToString();
+                picboxligaland.Load(objLiga.LandURL.ToString());
+                txtboxligaland.Text = objLiga.Land_Id.ToString();
+                txtboxligatransfermarktid.Text = objLiga.Tm_Link.ToString();
+            }
         }
     }
 }

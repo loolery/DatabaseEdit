@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "F:\\Repos\\loolery\\Editor\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|f:\\repos\\loolery\\editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Laender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Laender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DC0F6CF-75AC-4CDF-BFD1-419D3B10B33D}|Editor.csproj|F:\\Repos\\loolery\\Editor\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,20 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Laender.cs",
               "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Laender.cs",
               "RelativeDocumentMoniker": "Laender.cs",
               "ToolTip": "F:\\Repos\\loolery\\Editor\\Laender.cs",
               "RelativeToolTip": "Laender.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwB4AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T20:38:31.806Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -71,20 +72,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "F:\\Repos\\loolery\\Editor\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAuwH4AAAAbAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAASwGcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T16:04:26.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Entwurf]",
               "DocumentMoniker": "F:\\Repos\\loolery\\Editor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -104,8 +105,7 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T20:24:01.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T20:24:01.572Z"
             }
           ]
         }

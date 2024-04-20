@@ -28,6 +28,7 @@ namespace Editor
         public int Groesse { get; set; }
         public string BildURL { get; set; }
         public string Tm_Link { set; get; }
+        public string LandURL { set; get; }
 
     }
     public class vereine
