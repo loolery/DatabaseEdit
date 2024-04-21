@@ -103,7 +103,8 @@ namespace Editor
         private void cbolaender_SelectedIndexChanged(object sender, EventArgs e)
         {
             Laender objLand = cbolaender.SelectedItem as Laender;
-            if(objLand != null)
+            if (objLand != null)
+            {
                 txtboxlandid.Text = objLand.Id.ToString();
                 txtboxlandname.Text = objLand.Name.ToString();
                 txtboxlandeinwohner.Text = objLand.Einwohner.ToString();
@@ -112,8 +113,8 @@ namespace Editor
                 txtboxfahne.Text = objLand.Fahne.ToString();
                 txtboxhauptstadt.Text = objLand.Hauptstadt.ToString();
                 txtboxfifapunkte.Text = objLand.FifaPunkte.ToString();
-                txtboxtransfermarktid.Text =objLand.Tm_Id.ToString();
-
+                txtboxtransfermarktid.Text = objLand.Tm_Id.ToString();
+            }
             sqldb = new SQLiteConnection(connectionString);
             sqldb.Open();
             sqlcmd = null;
@@ -135,17 +136,51 @@ namespace Editor
         private void cboligaauswahl_SelectedIndexChanged(object sender, EventArgs e)
         {
             Ligen objLiga = cboligen.SelectedItem as Ligen;
-            if(objLiga != null)
+            if (objLiga != null)
             {
+                txtboxligaid.Text = objLiga.Id.ToString();
                 txtboxliganame.Text = objLiga.Name.ToString();
                 txtboxligarang.Text = objLiga.Rang.ToString();
                 txtboxligagroesse.Text = objLiga.Groesse.ToString();
-                picboxliga.Load(objLiga.BildURL.ToString());
+                picboxligalogo.Load(objLiga.BildURL.ToString());
                 txtboxligalogo.Text = objLiga.BildURL.ToString();
                 picboxligaland.Load(objLiga.LandURL.ToString());
                 txtboxligaland.Text = objLiga.Land_Id.ToString();
                 txtboxligatransfermarktid.Text = objLiga.Tm_Link.ToString();
             }
+            sqldb = new SQLiteConnection(connectionString);
+            sqldb.Open();
+            sqlcmd = null;
+            sqlcmd = sqldb.CreateCommand();
+            sqlcmd.CommandText = "SELECT * FROM tbl_vereine WHERE Liga_ID = " + objLiga.Id.ToString();
+            sqlreader = sqlcmd.ExecuteReader();
+            List<Vereine> vereinsauswahl = new List<Vereine>();
+            while (sqlreader.Read())
+            {
+                vereinsauswahl.Add(new Vereine() { Id = sqlreader.GetInt32(0), Stadt_Id = sqlreader.GetInt32(1), Liga_Id = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Tabellenplatz = sqlreader.GetInt32(4), Gruendung = sqlreader.GetString(5), Farben = sqlreader.GetString(6), Stadionname = sqlreader.GetString(7), Transfermarktid = sqlreader.GetInt32(8), Geld = sqlreader.GetDouble(9) });
+            }
+            sqldb.Close();
+            cbovereine.DataSource = vereinsauswahl;
+            cbovereine.ValueMember = "Id";
+            cbovereine.DisplayMember = "Name";
         }
+        private void cbovereinsauswahl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Vereine objVerein = cbovereine.SelectedItem as Vereine;
+            if (objVerein != null)
+            {
+                txtboxvereinid.Text = objVerein.Id.ToString();
+                txtboxvereinstadtid.Text = objVerein.Stadt_Id.ToString();
+                txtboxvereinligaid.Text = objVerein.Liga_Id.ToString();
+                txtboxvereintransfermarktid.Text = objVerein.Transfermarktid.ToString();
+                txtboxvereinname.Text = objVerein.Name.ToString();
+                txtboxvereintabellenplatz.Text = objVerein.Tabellenplatz.ToString();
+                txtboxvereingruendung.Text = objVerein.Gruendung.ToString();
+                txtboxvereinfarben.Text = objVerein.Farben.ToString();
+                txtboxvereinstadionname.Text = objVerein.Stadionname.ToString();
+                txtboxvereingeld.Text = objVerein.Geld.ToString();
+            }
+        }
+
     }
 }

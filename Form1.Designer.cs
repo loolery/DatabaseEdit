@@ -35,6 +35,8 @@
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbllandid = new System.Windows.Forms.Label();
+            this.txtboxlandid = new System.Windows.Forms.TextBox();
             this.picboxfahne = new System.Windows.Forms.PictureBox();
             this.lbltranfermarktid = new System.Windows.Forms.Label();
             this.lblfifapunkte = new System.Windows.Forms.Label();
@@ -55,12 +57,14 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cboligen = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblligaid = new System.Windows.Forms.Label();
+            this.txtboxligaid = new System.Windows.Forms.TextBox();
             this.lblligatranfermarktid = new System.Windows.Forms.Label();
             this.txtboxligatransfermarktid = new System.Windows.Forms.TextBox();
             this.txtboxligaland = new System.Windows.Forms.TextBox();
             this.picboxligaland = new System.Windows.Forms.PictureBox();
             this.lblligaland = new System.Windows.Forms.Label();
-            this.picboxliga = new System.Windows.Forms.PictureBox();
+            this.picboxligalogo = new System.Windows.Forms.PictureBox();
             this.lblligalogo = new System.Windows.Forms.Label();
             this.lblligagroesse = new System.Windows.Forms.Label();
             this.lblligarang = new System.Windows.Forms.Label();
@@ -70,8 +74,25 @@
             this.txtboxliganame = new System.Windows.Forms.TextBox();
             this.lblliganame = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblvereinstadionname = new System.Windows.Forms.Label();
+            this.lblvereinfarben = new System.Windows.Forms.Label();
+            this.txtboxvereinstadionname = new System.Windows.Forms.TextBox();
+            this.txtboxvereinfarben = new System.Windows.Forms.TextBox();
+            this.lblvereinligaid = new System.Windows.Forms.Label();
+            this.txtboxvereinligaid = new System.Windows.Forms.TextBox();
+            this.lblvereinstadtid = new System.Windows.Forms.Label();
+            this.txtboxvereinstadtid = new System.Windows.Forms.TextBox();
+            this.lblvereinid = new System.Windows.Forms.Label();
+            this.txtboxvereinid = new System.Windows.Forms.TextBox();
+            this.lblvereintransfermarktid = new System.Windows.Forms.Label();
+            this.lvlvereingruendung = new System.Windows.Forms.Label();
+            this.lblvereintabellenplatz = new System.Windows.Forms.Label();
+            this.txtboxvereingruendung = new System.Windows.Forms.TextBox();
+            this.txtboxvereintabellenplatz = new System.Windows.Forms.TextBox();
+            this.txtboxvereinname = new System.Windows.Forms.TextBox();
+            this.lblvereinname = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbovereine = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -79,8 +100,9 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtboxlandid = new System.Windows.Forms.TextBox();
-            this.lbllandid = new System.Windows.Forms.Label();
+            this.lblvereingeld = new System.Windows.Forms.Label();
+            this.txtboxvereingeld = new System.Windows.Forms.TextBox();
+            this.txtboxvereintransfermarktid = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).BeginInit();
@@ -88,7 +110,8 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxligaland)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxliga)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxligalogo)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
@@ -159,6 +182,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Länder Daten:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lbllandid
+            // 
+            this.lbllandid.AutoSize = true;
+            this.lbllandid.Location = new System.Drawing.Point(7, 32);
+            this.lbllandid.Name = "lbllandid";
+            this.lbllandid.Size = new System.Drawing.Size(21, 13);
+            this.lbllandid.TabIndex = 16;
+            this.lbllandid.Text = "ID:";
+            // 
+            // txtboxlandid
+            // 
+            this.txtboxlandid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxlandid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxlandid.Enabled = false;
+            this.txtboxlandid.Location = new System.Drawing.Point(74, 25);
+            this.txtboxlandid.Name = "txtboxlandid";
+            this.txtboxlandid.ReadOnly = true;
+            this.txtboxlandid.Size = new System.Drawing.Size(28, 20);
+            this.txtboxlandid.TabIndex = 15;
             // 
             // picboxfahne
             // 
@@ -323,12 +366,14 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lblligaid);
+            this.groupBox4.Controls.Add(this.txtboxligaid);
             this.groupBox4.Controls.Add(this.lblligatranfermarktid);
             this.groupBox4.Controls.Add(this.txtboxligatransfermarktid);
             this.groupBox4.Controls.Add(this.txtboxligaland);
             this.groupBox4.Controls.Add(this.picboxligaland);
             this.groupBox4.Controls.Add(this.lblligaland);
-            this.groupBox4.Controls.Add(this.picboxliga);
+            this.groupBox4.Controls.Add(this.picboxligalogo);
             this.groupBox4.Controls.Add(this.lblligalogo);
             this.groupBox4.Controls.Add(this.lblligagroesse);
             this.groupBox4.Controls.Add(this.lblligarang);
@@ -344,10 +389,30 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Liga Daten:";
             // 
+            // lblligaid
+            // 
+            this.lblligaid.AutoSize = true;
+            this.lblligaid.Location = new System.Drawing.Point(6, 28);
+            this.lblligaid.Name = "lblligaid";
+            this.lblligaid.Size = new System.Drawing.Size(21, 13);
+            this.lblligaid.TabIndex = 17;
+            this.lblligaid.Text = "ID:";
+            // 
+            // txtboxligaid
+            // 
+            this.txtboxligaid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxligaid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxligaid.Enabled = false;
+            this.txtboxligaid.Location = new System.Drawing.Point(76, 21);
+            this.txtboxligaid.Name = "txtboxligaid";
+            this.txtboxligaid.ReadOnly = true;
+            this.txtboxligaid.Size = new System.Drawing.Size(28, 20);
+            this.txtboxligaid.TabIndex = 16;
+            // 
             // lblligatranfermarktid
             // 
             this.lblligatranfermarktid.AutoSize = true;
-            this.lblligatranfermarktid.Location = new System.Drawing.Point(6, 165);
+            this.lblligatranfermarktid.Location = new System.Drawing.Point(1, 190);
             this.lblligatranfermarktid.Name = "lblligatranfermarktid";
             this.lblligatranfermarktid.Size = new System.Drawing.Size(60, 13);
             this.lblligatranfermarktid.TabIndex = 14;
@@ -355,21 +420,21 @@
             // 
             // txtboxligatransfermarktid
             // 
-            this.txtboxligatransfermarktid.Location = new System.Drawing.Point(73, 158);
+            this.txtboxligatransfermarktid.Location = new System.Drawing.Point(73, 183);
             this.txtboxligatransfermarktid.Name = "txtboxligatransfermarktid";
             this.txtboxligatransfermarktid.Size = new System.Drawing.Size(165, 20);
             this.txtboxligatransfermarktid.TabIndex = 13;
             // 
             // txtboxligaland
             // 
-            this.txtboxligaland.Location = new System.Drawing.Point(108, 132);
+            this.txtboxligaland.Location = new System.Drawing.Point(108, 157);
             this.txtboxligaland.Name = "txtboxligaland";
             this.txtboxligaland.Size = new System.Drawing.Size(130, 20);
             this.txtboxligaland.TabIndex = 12;
             // 
             // picboxligaland
             // 
-            this.picboxligaland.Location = new System.Drawing.Point(74, 132);
+            this.picboxligaland.Location = new System.Drawing.Point(74, 157);
             this.picboxligaland.Name = "picboxligaland";
             this.picboxligaland.Size = new System.Drawing.Size(28, 20);
             this.picboxligaland.TabIndex = 11;
@@ -378,24 +443,24 @@
             // lblligaland
             // 
             this.lblligaland.AutoSize = true;
-            this.lblligaland.Location = new System.Drawing.Point(4, 139);
+            this.lblligaland.Location = new System.Drawing.Point(4, 164);
             this.lblligaland.Name = "lblligaland";
             this.lblligaland.Size = new System.Drawing.Size(34, 13);
             this.lblligaland.TabIndex = 10;
             this.lblligaland.Text = "Land:";
             // 
-            // picboxliga
+            // picboxligalogo
             // 
-            this.picboxliga.Location = new System.Drawing.Point(74, 100);
-            this.picboxliga.Name = "picboxliga";
-            this.picboxliga.Size = new System.Drawing.Size(28, 20);
-            this.picboxliga.TabIndex = 9;
-            this.picboxliga.TabStop = false;
+            this.picboxligalogo.Location = new System.Drawing.Point(74, 125);
+            this.picboxligalogo.Name = "picboxligalogo";
+            this.picboxligalogo.Size = new System.Drawing.Size(28, 20);
+            this.picboxligalogo.TabIndex = 9;
+            this.picboxligalogo.TabStop = false;
             // 
             // lblligalogo
             // 
             this.lblligalogo.AutoSize = true;
-            this.lblligalogo.Location = new System.Drawing.Point(4, 107);
+            this.lblligalogo.Location = new System.Drawing.Point(4, 132);
             this.lblligalogo.Name = "lblligalogo";
             this.lblligalogo.Size = new System.Drawing.Size(57, 13);
             this.lblligalogo.TabIndex = 8;
@@ -404,7 +469,7 @@
             // lblligagroesse
             // 
             this.lblligagroesse.AutoSize = true;
-            this.lblligagroesse.Location = new System.Drawing.Point(4, 81);
+            this.lblligagroesse.Location = new System.Drawing.Point(4, 106);
             this.lblligagroesse.Name = "lblligagroesse";
             this.lblligagroesse.Size = new System.Drawing.Size(60, 13);
             this.lblligagroesse.TabIndex = 7;
@@ -413,7 +478,7 @@
             // lblligarang
             // 
             this.lblligarang.AutoSize = true;
-            this.lblligarang.Location = new System.Drawing.Point(4, 55);
+            this.lblligarang.Location = new System.Drawing.Point(4, 80);
             this.lblligarang.Name = "lblligarang";
             this.lblligarang.Size = new System.Drawing.Size(59, 13);
             this.lblligarang.TabIndex = 6;
@@ -421,28 +486,28 @@
             // 
             // txtboxligalogo
             // 
-            this.txtboxligalogo.Location = new System.Drawing.Point(108, 100);
+            this.txtboxligalogo.Location = new System.Drawing.Point(108, 125);
             this.txtboxligalogo.Name = "txtboxligalogo";
             this.txtboxligalogo.Size = new System.Drawing.Size(130, 20);
             this.txtboxligalogo.TabIndex = 5;
             // 
             // txtboxligagroesse
             // 
-            this.txtboxligagroesse.Location = new System.Drawing.Point(74, 74);
+            this.txtboxligagroesse.Location = new System.Drawing.Point(74, 99);
             this.txtboxligagroesse.Name = "txtboxligagroesse";
             this.txtboxligagroesse.Size = new System.Drawing.Size(165, 20);
             this.txtboxligagroesse.TabIndex = 4;
             // 
             // txtboxligarang
             // 
-            this.txtboxligarang.Location = new System.Drawing.Point(73, 48);
+            this.txtboxligarang.Location = new System.Drawing.Point(73, 73);
             this.txtboxligarang.Name = "txtboxligarang";
             this.txtboxligarang.Size = new System.Drawing.Size(165, 20);
             this.txtboxligarang.TabIndex = 3;
             // 
             // txtboxliganame
             // 
-            this.txtboxliganame.Location = new System.Drawing.Point(74, 22);
+            this.txtboxliganame.Location = new System.Drawing.Point(74, 47);
             this.txtboxliganame.Name = "txtboxliganame";
             this.txtboxliganame.Size = new System.Drawing.Size(165, 20);
             this.txtboxliganame.TabIndex = 2;
@@ -450,7 +515,7 @@
             // lblliganame
             // 
             this.lblliganame.AutoSize = true;
-            this.lblliganame.Location = new System.Drawing.Point(6, 29);
+            this.lblliganame.Location = new System.Drawing.Point(6, 54);
             this.lblliganame.Name = "lblliganame";
             this.lblliganame.Size = new System.Drawing.Size(38, 13);
             this.lblliganame.TabIndex = 1;
@@ -458,6 +523,26 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.txtboxvereintransfermarktid);
+            this.groupBox5.Controls.Add(this.lblvereingeld);
+            this.groupBox5.Controls.Add(this.txtboxvereingeld);
+            this.groupBox5.Controls.Add(this.lblvereinstadionname);
+            this.groupBox5.Controls.Add(this.lblvereinfarben);
+            this.groupBox5.Controls.Add(this.txtboxvereinstadionname);
+            this.groupBox5.Controls.Add(this.txtboxvereinfarben);
+            this.groupBox5.Controls.Add(this.lblvereinligaid);
+            this.groupBox5.Controls.Add(this.txtboxvereinligaid);
+            this.groupBox5.Controls.Add(this.lblvereinstadtid);
+            this.groupBox5.Controls.Add(this.txtboxvereinstadtid);
+            this.groupBox5.Controls.Add(this.lblvereinid);
+            this.groupBox5.Controls.Add(this.txtboxvereinid);
+            this.groupBox5.Controls.Add(this.lblvereintransfermarktid);
+            this.groupBox5.Controls.Add(this.lvlvereingruendung);
+            this.groupBox5.Controls.Add(this.lblvereintabellenplatz);
+            this.groupBox5.Controls.Add(this.txtboxvereingruendung);
+            this.groupBox5.Controls.Add(this.txtboxvereintabellenplatz);
+            this.groupBox5.Controls.Add(this.txtboxvereinname);
+            this.groupBox5.Controls.Add(this.lblvereinname);
             this.groupBox5.Location = new System.Drawing.Point(257, 83);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(245, 573);
@@ -465,9 +550,158 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Vereins Daten:";
             // 
+            // lblvereinstadionname
+            // 
+            this.lblvereinstadionname.AutoSize = true;
+            this.lblvereinstadionname.Location = new System.Drawing.Point(5, 243);
+            this.lblvereinstadionname.Name = "lblvereinstadionname";
+            this.lblvereinstadionname.Size = new System.Drawing.Size(46, 13);
+            this.lblvereinstadionname.TabIndex = 41;
+            this.lblvereinstadionname.Text = "Stadion:";
+            // 
+            // lblvereinfarben
+            // 
+            this.lblvereinfarben.AutoSize = true;
+            this.lblvereinfarben.Location = new System.Drawing.Point(5, 217);
+            this.lblvereinfarben.Name = "lblvereinfarben";
+            this.lblvereinfarben.Size = new System.Drawing.Size(43, 13);
+            this.lblvereinfarben.TabIndex = 40;
+            this.lblvereinfarben.Text = "Farben:";
+            // 
+            // txtboxvereinstadionname
+            // 
+            this.txtboxvereinstadionname.Location = new System.Drawing.Point(75, 236);
+            this.txtboxvereinstadionname.Name = "txtboxvereinstadionname";
+            this.txtboxvereinstadionname.Size = new System.Drawing.Size(165, 20);
+            this.txtboxvereinstadionname.TabIndex = 39;
+            // 
+            // txtboxvereinfarben
+            // 
+            this.txtboxvereinfarben.Location = new System.Drawing.Point(76, 210);
+            this.txtboxvereinfarben.Name = "txtboxvereinfarben";
+            this.txtboxvereinfarben.Size = new System.Drawing.Size(165, 20);
+            this.txtboxvereinfarben.TabIndex = 38;
+            // 
+            // lblvereinligaid
+            // 
+            this.lblvereinligaid.AutoSize = true;
+            this.lblvereinligaid.Location = new System.Drawing.Point(4, 84);
+            this.lblvereinligaid.Name = "lblvereinligaid";
+            this.lblvereinligaid.Size = new System.Drawing.Size(44, 13);
+            this.lblvereinligaid.TabIndex = 37;
+            this.lblvereinligaid.Text = "Liga ID:";
+            // 
+            // txtboxvereinligaid
+            // 
+            this.txtboxvereinligaid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxvereinligaid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxvereinligaid.Enabled = false;
+            this.txtboxvereinligaid.Location = new System.Drawing.Point(78, 77);
+            this.txtboxvereinligaid.Name = "txtboxvereinligaid";
+            this.txtboxvereinligaid.ReadOnly = true;
+            this.txtboxvereinligaid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxvereinligaid.TabIndex = 36;
+            // 
+            // lblvereinstadtid
+            // 
+            this.lblvereinstadtid.AutoSize = true;
+            this.lblvereinstadtid.Location = new System.Drawing.Point(4, 58);
+            this.lblvereinstadtid.Name = "lblvereinstadtid";
+            this.lblvereinstadtid.Size = new System.Drawing.Size(49, 13);
+            this.lblvereinstadtid.TabIndex = 35;
+            this.lblvereinstadtid.Text = "Stadt ID:";
+            // 
+            // txtboxvereinstadtid
+            // 
+            this.txtboxvereinstadtid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxvereinstadtid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxvereinstadtid.Enabled = false;
+            this.txtboxvereinstadtid.Location = new System.Drawing.Point(78, 51);
+            this.txtboxvereinstadtid.Name = "txtboxvereinstadtid";
+            this.txtboxvereinstadtid.ReadOnly = true;
+            this.txtboxvereinstadtid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxvereinstadtid.TabIndex = 34;
+            // 
+            // lblvereinid
+            // 
+            this.lblvereinid.AutoSize = true;
+            this.lblvereinid.Location = new System.Drawing.Point(8, 32);
+            this.lblvereinid.Name = "lblvereinid";
+            this.lblvereinid.Size = new System.Drawing.Size(21, 13);
+            this.lblvereinid.TabIndex = 33;
+            this.lblvereinid.Text = "ID:";
+            // 
+            // txtboxvereinid
+            // 
+            this.txtboxvereinid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxvereinid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxvereinid.Enabled = false;
+            this.txtboxvereinid.Location = new System.Drawing.Point(78, 25);
+            this.txtboxvereinid.Name = "txtboxvereinid";
+            this.txtboxvereinid.ReadOnly = true;
+            this.txtboxvereinid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxvereinid.TabIndex = 32;
+            // 
+            // lblvereintransfermarktid
+            // 
+            this.lblvereintransfermarktid.AutoSize = true;
+            this.lblvereintransfermarktid.Location = new System.Drawing.Point(3, 109);
+            this.lblvereintransfermarktid.Name = "lblvereintransfermarktid";
+            this.lblvereintransfermarktid.Size = new System.Drawing.Size(60, 13);
+            this.lblvereintransfermarktid.TabIndex = 31;
+            this.lblvereintransfermarktid.Text = "Transferm.:";
+            // 
+            // lvlvereingruendung
+            // 
+            this.lvlvereingruendung.AutoSize = true;
+            this.lvlvereingruendung.Location = new System.Drawing.Point(5, 191);
+            this.lvlvereingruendung.Name = "lvlvereingruendung";
+            this.lvlvereingruendung.Size = new System.Drawing.Size(63, 13);
+            this.lvlvereingruendung.TabIndex = 24;
+            this.lvlvereingruendung.Text = "Gruendung:";
+            // 
+            // lblvereintabellenplatz
+            // 
+            this.lblvereintabellenplatz.AutoSize = true;
+            this.lblvereintabellenplatz.Location = new System.Drawing.Point(5, 165);
+            this.lblvereintabellenplatz.Name = "lblvereintabellenplatz";
+            this.lblvereintabellenplatz.Size = new System.Drawing.Size(45, 13);
+            this.lblvereintabellenplatz.TabIndex = 23;
+            this.lblvereintabellenplatz.Text = "Tabelle:";
+            // 
+            // txtboxvereingruendung
+            // 
+            this.txtboxvereingruendung.Location = new System.Drawing.Point(75, 184);
+            this.txtboxvereingruendung.Name = "txtboxvereingruendung";
+            this.txtboxvereingruendung.Size = new System.Drawing.Size(165, 20);
+            this.txtboxvereingruendung.TabIndex = 21;
+            // 
+            // txtboxvereintabellenplatz
+            // 
+            this.txtboxvereintabellenplatz.Location = new System.Drawing.Point(76, 158);
+            this.txtboxvereintabellenplatz.Name = "txtboxvereintabellenplatz";
+            this.txtboxvereintabellenplatz.Size = new System.Drawing.Size(165, 20);
+            this.txtboxvereintabellenplatz.TabIndex = 20;
+            // 
+            // txtboxvereinname
+            // 
+            this.txtboxvereinname.Location = new System.Drawing.Point(75, 132);
+            this.txtboxvereinname.Name = "txtboxvereinname";
+            this.txtboxvereinname.Size = new System.Drawing.Size(165, 20);
+            this.txtboxvereinname.TabIndex = 19;
+            // 
+            // lblvereinname
+            // 
+            this.lblvereinname.AutoSize = true;
+            this.lblvereinname.Location = new System.Drawing.Point(7, 139);
+            this.lblvereinname.Name = "lblvereinname";
+            this.lblvereinname.Size = new System.Drawing.Size(38, 13);
+            this.lblvereinname.TabIndex = 18;
+            this.lblvereinname.Text = "Name:";
+            // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.comboBox3);
+            this.groupBox6.Controls.Add(this.cbovereine);
             this.groupBox6.Location = new System.Drawing.Point(257, 28);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(245, 50);
@@ -475,13 +709,14 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Vereins auswahl:";
             // 
-            // comboBox3
+            // cbovereine
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(6, 19);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(235, 21);
-            this.comboBox3.TabIndex = 0;
+            this.cbovereine.FormattingEnabled = true;
+            this.cbovereine.Location = new System.Drawing.Point(6, 19);
+            this.cbovereine.Name = "cbovereine";
+            this.cbovereine.Size = new System.Drawing.Size(235, 21);
+            this.cbovereine.TabIndex = 0;
+            this.cbovereine.SelectedIndexChanged += new System.EventHandler(this.cbovereinsauswahl_SelectedIndexChanged);
             // 
             // groupBox7
             // 
@@ -559,25 +794,32 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Spieler Daten:";
             // 
-            // txtboxlandid
+            // lblvereingeld
             // 
-            this.txtboxlandid.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtboxlandid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtboxlandid.Enabled = false;
-            this.txtboxlandid.Location = new System.Drawing.Point(74, 25);
-            this.txtboxlandid.Name = "txtboxlandid";
-            this.txtboxlandid.ReadOnly = true;
-            this.txtboxlandid.Size = new System.Drawing.Size(28, 20);
-            this.txtboxlandid.TabIndex = 15;
+            this.lblvereingeld.AutoSize = true;
+            this.lblvereingeld.Location = new System.Drawing.Point(7, 269);
+            this.lblvereingeld.Name = "lblvereingeld";
+            this.lblvereingeld.Size = new System.Drawing.Size(32, 13);
+            this.lblvereingeld.TabIndex = 43;
+            this.lblvereingeld.Text = "Geld:";
             // 
-            // lbllandid
+            // txtboxvereingeld
             // 
-            this.lbllandid.AutoSize = true;
-            this.lbllandid.Location = new System.Drawing.Point(7, 32);
-            this.lbllandid.Name = "lbllandid";
-            this.lbllandid.Size = new System.Drawing.Size(21, 13);
-            this.lbllandid.TabIndex = 16;
-            this.lbllandid.Text = "ID:";
+            this.txtboxvereingeld.Location = new System.Drawing.Point(75, 262);
+            this.txtboxvereingeld.Name = "txtboxvereingeld";
+            this.txtboxvereingeld.Size = new System.Drawing.Size(165, 20);
+            this.txtboxvereingeld.TabIndex = 42;
+            // 
+            // txtboxvereintransfermarktid
+            // 
+            this.txtboxvereintransfermarktid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxvereintransfermarktid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxvereintransfermarktid.Enabled = false;
+            this.txtboxvereintransfermarktid.Location = new System.Drawing.Point(78, 102);
+            this.txtboxvereintransfermarktid.Name = "txtboxvereintransfermarktid";
+            this.txtboxvereintransfermarktid.ReadOnly = true;
+            this.txtboxvereintransfermarktid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxvereintransfermarktid.TabIndex = 44;
             // 
             // Form1
             // 
@@ -611,7 +853,9 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxligaland)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxliga)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxligalogo)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -638,7 +882,7 @@
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.ComboBox cbolaender;
         private System.Windows.Forms.ComboBox cboligen;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbovereine;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
@@ -668,11 +912,33 @@
         private System.Windows.Forms.TextBox txtboxligaland;
         private System.Windows.Forms.PictureBox picboxligaland;
         private System.Windows.Forms.Label lblligaland;
-        private System.Windows.Forms.PictureBox picboxliga;
+        private System.Windows.Forms.PictureBox picboxligalogo;
         private System.Windows.Forms.Label lblligatranfermarktid;
         private System.Windows.Forms.TextBox txtboxligatransfermarktid;
         private System.Windows.Forms.Label lbllandid;
         private System.Windows.Forms.TextBox txtboxlandid;
+        private System.Windows.Forms.Label lblligaid;
+        private System.Windows.Forms.TextBox txtboxligaid;
+        private System.Windows.Forms.Label lblvereinid;
+        private System.Windows.Forms.TextBox txtboxvereinid;
+        private System.Windows.Forms.Label lblvereintransfermarktid;
+        private System.Windows.Forms.Label lvlvereingruendung;
+        private System.Windows.Forms.Label lblvereintabellenplatz;
+        private System.Windows.Forms.TextBox txtboxvereingruendung;
+        private System.Windows.Forms.TextBox txtboxvereintabellenplatz;
+        private System.Windows.Forms.TextBox txtboxvereinname;
+        private System.Windows.Forms.Label lblvereinname;
+        private System.Windows.Forms.Label lblvereinligaid;
+        private System.Windows.Forms.TextBox txtboxvereinligaid;
+        private System.Windows.Forms.Label lblvereinstadtid;
+        private System.Windows.Forms.TextBox txtboxvereinstadtid;
+        private System.Windows.Forms.Label lblvereinstadionname;
+        private System.Windows.Forms.Label lblvereinfarben;
+        private System.Windows.Forms.TextBox txtboxvereinstadionname;
+        private System.Windows.Forms.TextBox txtboxvereinfarben;
+        private System.Windows.Forms.Label lblvereingeld;
+        private System.Windows.Forms.TextBox txtboxvereingeld;
+        private System.Windows.Forms.TextBox txtboxvereintransfermarktid;
     }
 }
 

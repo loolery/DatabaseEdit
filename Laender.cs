@@ -31,9 +31,18 @@ namespace Editor
         public string LandURL { set; get; }
 
     }
-    public class vereine
+    public class Vereine
     {
         public int Id { get; set; }
+        public int Stadt_Id { get; set; }
+        public int Liga_Id { get; set; }
+        public string Name { set; get; }
+        public int Tabellenplatz { get; set; }
+        public string Gruendung { get; set; }
+        public string Farben { set; get; }
+        public string Stadionname { set; get; }
+        public int Transfermarktid { set; get; }
+        public double Geld { set; get; }
 
     }
 }
