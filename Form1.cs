@@ -180,7 +180,40 @@ namespace Editor
                 txtboxvereinstadionname.Text = objVerein.Stadionname.ToString();
                 txtboxvereingeld.Text = objVerein.Geld.ToString();
             }
+            sqldb = new SQLiteConnection(connectionString);
+            sqldb.Open();
+            sqlcmd = null;
+            sqlcmd = sqldb.CreateCommand();
+            sqlcmd.CommandText = "SELECT * FROM tbl_personen WHERE Verein_ID = " + objVerein.Id.ToString();
+            sqlreader = sqlcmd.ExecuteReader();
+            List<Spieler> spielerauswahl = new List<Spieler>();
+            while (sqlreader.Read())
+            {
+                spielerauswahl.Add(new Spieler() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Verein_Id = sqlreader.GetInt32(2), Trikotnr = sqlreader.GetInt32(3), Vorname = sqlreader.GetString(4), Nachname = sqlreader.GetString(5), Geburtstag = sqlreader.GetString(6), Groesse = sqlreader.GetInt32(7), Fuss = sqlreader.GetInt32(8), Foto = sqlreader.GetString(9)  });
+            }
+            sqldb.Close();
+            cbospieler.DataSource = spielerauswahl;
+            cbospieler.ValueMember = "Id";
+            cbospieler.DisplayMember = "Name";
         }
 
+        private void cboxspieler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Spieler objSpieler = cbospieler.SelectedItem as Spieler;
+            if (objSpieler != null)
+            {
+                txtboxspielerid.Text = objSpieler.Id.ToString();
+                txtboxspielerlandid.Text = objSpieler.Land_Id.ToString();
+                txtboxspielervereinid.Text = objSpieler.Verein_Id.ToString();
+                txtboxspielertrikotnr.Text = objSpieler.Trikotnr.ToString();
+                txtboxspielervorname.Text = objSpieler.Vorname.ToString();
+                txtboxspielernachname.Text = objSpieler.Nachname.ToString();
+                txtboxspielergeburtstag.Text = objSpieler.Geburtstag.ToString();
+                txtboxspielergroesse.Text = objSpieler.Groesse.ToString();
+                txtboxspielerfuss.Text = objSpieler.Fuss.ToString();
+                picboxspielerbild.Load(objSpieler.Foto.ToString());
+                txtboxspielerbild.Text = objSpieler.Foto.ToString();
+            }
+        }
     }
 }
