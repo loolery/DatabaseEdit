@@ -62,5 +62,8 @@ namespace Editor
         public int Groesse { set; get; }
         public int Fuss { set; get; }
         public string Foto { set; get; }
+        public int Technik { set; get; }
+        public int Einsatz { set; get; }
+        public int Schnelligkeit { set; get; }
     }
 }

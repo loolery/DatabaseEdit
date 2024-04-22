@@ -189,7 +189,7 @@ namespace Editor
             List<Spieler> spielerauswahl = new List<Spieler>();
             while (sqlreader.Read())
             {
-                spielerauswahl.Add(new Spieler() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Verein_Id = sqlreader.GetInt32(2), Trikotnr = sqlreader.GetInt32(3), Vorname = sqlreader.GetString(4), Nachname = sqlreader.GetString(5), Geburtstag = sqlreader.GetString(6), Groesse = sqlreader.GetInt32(7), Fuss = sqlreader.GetInt32(8), Foto = sqlreader.GetString(9)  });
+                spielerauswahl.Add(new Spieler() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Verein_Id = sqlreader.GetInt32(2), Trikotnr = sqlreader.GetInt32(3), Vorname = sqlreader.GetString(4), Nachname = sqlreader.GetString(5), Geburtstag = sqlreader.GetString(6), Groesse = sqlreader.GetInt32(7), Fuss = sqlreader.GetInt32(8), Foto = sqlreader.GetString(9), Technik = sqlreader.GetInt32(19), Einsatz = sqlreader.GetInt32(20), Schnelligkeit = sqlreader.GetInt32(21)  });
             }
             sqldb.Close();
             cbospieler.DataSource = spielerauswahl;
@@ -213,7 +213,15 @@ namespace Editor
                 txtboxspielerfuss.Text = objSpieler.Fuss.ToString();
                 picboxspielerbild.Load(objSpieler.Foto.ToString());
                 txtboxspielerbild.Text = objSpieler.Foto.ToString();
+                txtboxspielertechnik.Text = objSpieler.Technik.ToString();
+                txtboxspielereinsatz.Text = objSpieler.Einsatz.ToString();
+                txtboxspielerschnelligkeit.Text = objSpieler.Schnelligkeit.ToString();
             }
+        }
+
+        private void groupBox9_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
