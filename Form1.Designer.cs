@@ -104,6 +104,12 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.lblspielerschnelligkeit = new System.Windows.Forms.Label();
+            this.lblspielereinsatz = new System.Windows.Forms.Label();
+            this.txtboxspielerschnelligkeit = new System.Windows.Forms.TextBox();
+            this.txtboxspielereinsatz = new System.Windows.Forms.TextBox();
+            this.txtboxspielertechnik = new System.Windows.Forms.TextBox();
+            this.lblspielertechnik = new System.Windows.Forms.Label();
             this.picboxspielerbild = new System.Windows.Forms.PictureBox();
             this.txtboxspielertrikotnr = new System.Windows.Forms.TextBox();
             this.lblspielertrikotnr = new System.Windows.Forms.Label();
@@ -125,12 +131,6 @@
             this.txtboxspielernachname = new System.Windows.Forms.TextBox();
             this.txtboxspielervorname = new System.Windows.Forms.TextBox();
             this.lblspielervorname = new System.Windows.Forms.Label();
-            this.lblspielerschnelligkeit = new System.Windows.Forms.Label();
-            this.lblspielereinsatz = new System.Windows.Forms.Label();
-            this.txtboxspielerschnelligkeit = new System.Windows.Forms.TextBox();
-            this.txtboxspielereinsatz = new System.Windows.Forms.TextBox();
-            this.txtboxspielertechnik = new System.Windows.Forms.TextBox();
-            this.lblspielertechnik = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).BeginInit();
@@ -888,8 +888,57 @@
             this.groupBox9.Text = "Spieler Daten:";
             this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
+            // lblspielerschnelligkeit
+            // 
+            this.lblspielerschnelligkeit.AutoSize = true;
+            this.lblspielerschnelligkeit.Location = new System.Drawing.Point(0, 544);
+            this.lblspielerschnelligkeit.Name = "lblspielerschnelligkeit";
+            this.lblspielerschnelligkeit.Size = new System.Drawing.Size(70, 13);
+            this.lblspielerschnelligkeit.TabIndex = 53;
+            this.lblspielerschnelligkeit.Text = "Schnelligkeit:";
+            // 
+            // lblspielereinsatz
+            // 
+            this.lblspielereinsatz.AutoSize = true;
+            this.lblspielereinsatz.Location = new System.Drawing.Point(1, 518);
+            this.lblspielereinsatz.Name = "lblspielereinsatz";
+            this.lblspielereinsatz.Size = new System.Drawing.Size(44, 13);
+            this.lblspielereinsatz.TabIndex = 52;
+            this.lblspielereinsatz.Text = "Einsatz:";
+            // 
+            // txtboxspielerschnelligkeit
+            // 
+            this.txtboxspielerschnelligkeit.Location = new System.Drawing.Point(74, 537);
+            this.txtboxspielerschnelligkeit.Name = "txtboxspielerschnelligkeit";
+            this.txtboxspielerschnelligkeit.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielerschnelligkeit.TabIndex = 51;
+            // 
+            // txtboxspielereinsatz
+            // 
+            this.txtboxspielereinsatz.Location = new System.Drawing.Point(74, 511);
+            this.txtboxspielereinsatz.Name = "txtboxspielereinsatz";
+            this.txtboxspielereinsatz.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielereinsatz.TabIndex = 50;
+            // 
+            // txtboxspielertechnik
+            // 
+            this.txtboxspielertechnik.Location = new System.Drawing.Point(74, 485);
+            this.txtboxspielertechnik.Name = "txtboxspielertechnik";
+            this.txtboxspielertechnik.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielertechnik.TabIndex = 49;
+            // 
+            // lblspielertechnik
+            // 
+            this.lblspielertechnik.AutoSize = true;
+            this.lblspielertechnik.Location = new System.Drawing.Point(1, 492);
+            this.lblspielertechnik.Name = "lblspielertechnik";
+            this.lblspielertechnik.Size = new System.Drawing.Size(49, 13);
+            this.lblspielertechnik.TabIndex = 48;
+            this.lblspielertechnik.Text = "Technik:";
+            // 
             // picboxspielerbild
             // 
+            this.picboxspielerbild.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picboxspielerbild.Location = new System.Drawing.Point(75, 257);
             this.picboxspielerbild.MaximumSize = new System.Drawing.Size(139, 181);
             this.picboxspielerbild.MinimumSize = new System.Drawing.Size(139, 181);
@@ -1074,54 +1123,6 @@
             this.lblspielervorname.Size = new System.Drawing.Size(52, 13);
             this.lblspielervorname.TabIndex = 18;
             this.lblspielervorname.Text = "Vorname:";
-            // 
-            // lblspielerschnelligkeit
-            // 
-            this.lblspielerschnelligkeit.AutoSize = true;
-            this.lblspielerschnelligkeit.Location = new System.Drawing.Point(0, 544);
-            this.lblspielerschnelligkeit.Name = "lblspielerschnelligkeit";
-            this.lblspielerschnelligkeit.Size = new System.Drawing.Size(70, 13);
-            this.lblspielerschnelligkeit.TabIndex = 53;
-            this.lblspielerschnelligkeit.Text = "Schnelligkeit:";
-            // 
-            // lblspielereinsatz
-            // 
-            this.lblspielereinsatz.AutoSize = true;
-            this.lblspielereinsatz.Location = new System.Drawing.Point(1, 518);
-            this.lblspielereinsatz.Name = "lblspielereinsatz";
-            this.lblspielereinsatz.Size = new System.Drawing.Size(44, 13);
-            this.lblspielereinsatz.TabIndex = 52;
-            this.lblspielereinsatz.Text = "Einsatz:";
-            // 
-            // txtboxspielerschnelligkeit
-            // 
-            this.txtboxspielerschnelligkeit.Location = new System.Drawing.Point(74, 537);
-            this.txtboxspielerschnelligkeit.Name = "txtboxspielerschnelligkeit";
-            this.txtboxspielerschnelligkeit.Size = new System.Drawing.Size(38, 20);
-            this.txtboxspielerschnelligkeit.TabIndex = 51;
-            // 
-            // txtboxspielereinsatz
-            // 
-            this.txtboxspielereinsatz.Location = new System.Drawing.Point(74, 511);
-            this.txtboxspielereinsatz.Name = "txtboxspielereinsatz";
-            this.txtboxspielereinsatz.Size = new System.Drawing.Size(38, 20);
-            this.txtboxspielereinsatz.TabIndex = 50;
-            // 
-            // txtboxspielertechnik
-            // 
-            this.txtboxspielertechnik.Location = new System.Drawing.Point(74, 485);
-            this.txtboxspielertechnik.Name = "txtboxspielertechnik";
-            this.txtboxspielertechnik.Size = new System.Drawing.Size(38, 20);
-            this.txtboxspielertechnik.TabIndex = 49;
-            // 
-            // lblspielertechnik
-            // 
-            this.lblspielertechnik.AutoSize = true;
-            this.lblspielertechnik.Location = new System.Drawing.Point(1, 492);
-            this.lblspielertechnik.Name = "lblspielertechnik";
-            this.lblspielertechnik.Size = new System.Drawing.Size(49, 13);
-            this.lblspielertechnik.TabIndex = 48;
-            this.lblspielertechnik.Text = "Technik:";
             // 
             // Form1
             // 
