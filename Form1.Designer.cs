@@ -103,6 +103,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lbltest = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.lblspielerschnelligkeit = new System.Windows.Forms.Label();
             this.lblspielereinsatz = new System.Windows.Forms.Label();
@@ -142,6 +143,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxspielerbild)).BeginInit();
             this.SuspendLayout();
@@ -211,7 +213,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Länder Daten:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lbllandid
             // 
@@ -363,7 +364,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Länder auswahl:";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // cbolaender
             // 
@@ -383,7 +383,6 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Liga auswahl:";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // cboligen
             // 
@@ -844,12 +843,23 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.lbltest);
             this.groupBox8.Location = new System.Drawing.Point(758, 27);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(397, 628);
             this.groupBox8.TabIndex = 11;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Spieler Daten:";
+            // 
+            // lbltest
+            // 
+            this.lbltest.AutoSize = true;
+            this.lbltest.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltest.Location = new System.Drawing.Point(183, 308);
+            this.lbltest.Name = "lbltest";
+            this.lbltest.Size = new System.Drawing.Size(46, 31);
+            this.lbltest.TabIndex = 44;
+            this.lbltest.Text = "__";
             // 
             // groupBox9
             // 
@@ -886,7 +896,6 @@
             this.groupBox9.TabIndex = 12;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Spieler Daten:";
-            this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
             // lblspielerschnelligkeit
             // 
@@ -1114,6 +1123,7 @@
             this.txtboxspielervorname.Name = "txtboxspielervorname";
             this.txtboxspielervorname.Size = new System.Drawing.Size(165, 20);
             this.txtboxspielervorname.TabIndex = 19;
+            this.txtboxspielervorname.TextChanged += new System.EventHandler(this.txtboxspielervorname_TextChanged);
             // 
             // lblspielervorname
             // 
@@ -1162,6 +1172,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxspielerbild)).EndInit();
@@ -1274,6 +1286,7 @@
         private System.Windows.Forms.TextBox txtboxspielereinsatz;
         private System.Windows.Forms.TextBox txtboxspielertechnik;
         private System.Windows.Forms.Label lblspielertechnik;
+        private System.Windows.Forms.Label lbltest;
     }
 }
 

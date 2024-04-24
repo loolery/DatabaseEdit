@@ -12,55 +12,33 @@ using Microsoft.Data.Sqlite;
 using System.IO;
 using System.Security.Cryptography;
 using System.Diagnostics;
-//using static System.Net.WebRequestMethods;
 using System.Net.NetworkInformation;
 
 namespace Editor
 {
     public partial class Form1 : Form
     {
-        // SQLite DB vorbereitungen für die Events
+        // SQLite DB load
         Sql sqldbcaller = new Sql("test.db3");
         public static SQLiteDataReader sqlreader = null;
+        // Global Objects load
+        public Laender objLand = new Laender();
 
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
-
         private void btnOpen_Click(object sender, EventArgs e)
         {                
-            sqlreader = sqldbcaller.ReadCmd("SELECT * FROM tbl_land");
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_land");
             List<Laender> laenderauswahl = new List<Laender>();
             while (sqlreader.Read())    
             {    
@@ -81,11 +59,6 @@ namespace Editor
             cbolaender.DisplayMember = "Name";      
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            // speichert alles
-        }
-
         private void cbolaender_SelectedIndexChanged(object sender, EventArgs e)
         {
             Laender objLand = cbolaender.SelectedItem as Laender;
@@ -101,7 +74,7 @@ namespace Editor
                 txtboxfifapunkte.Text = objLand.FifaPunkte.ToString();
                 txtboxtransfermarktid.Text = objLand.Tm_Id.ToString();
             }
-            sqlreader = sqldbcaller.ReadCmd("SELECT * FROM tbl_ligen WHERE Land_ID = " + objLand.Id.ToString());
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_ligen WHERE Land_ID = " + objLand.Id.ToString());
             List<Ligen> ligenauswahl = new List<Ligen>();
             while (sqlreader.Read())
             {
@@ -129,7 +102,7 @@ namespace Editor
                 txtboxligaland.Text = objLiga.Land_Id.ToString();
                 txtboxligatransfermarktid.Text = objLiga.Tm_Link.ToString();
             }
-            sqlreader = sqldbcaller.ReadCmd("SELECT * FROM tbl_vereine WHERE Liga_ID = " + objLiga.Id.ToString());
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_vereine WHERE Liga_ID = " + objLiga.Id.ToString());
             List<Vereine> vereinsauswahl = new List<Vereine>();
             while (sqlreader.Read())
             {
@@ -156,7 +129,7 @@ namespace Editor
                 txtboxvereinstadionname.Text = objVerein.Stadionname.ToString();
                 txtboxvereingeld.Text = objVerein.Geld.ToString();
             }
-            sqlreader = sqldbcaller.ReadCmd("SELECT * FROM tbl_personen WHERE Verein_ID = " + objVerein.Id.ToString());
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_personen WHERE Verein_ID = " + objVerein.Id.ToString());
             List<Spieler> spielerauswahl = new List<Spieler>();
             while (sqlreader.Read())
             {
@@ -186,13 +159,16 @@ namespace Editor
                 txtboxspielerbild.Text = objSpieler.Foto.ToString();
                 txtboxspielertechnik.Text = objSpieler.Technik.ToString();
                 txtboxspielereinsatz.Text = objSpieler.Einsatz.ToString();
-                txtboxspielerschnelligkeit.Text = objSpieler.Schnelligkeit.ToString();
+                txtboxspielerschnelligkeit.Text = objSpieler.Schnelligkeit.ToString();                
             }
         }
-
-        private void groupBox9_Enter(object sender, EventArgs e)
+        private void txtboxspielervorname_TextChanged(object sender, EventArgs e)
         {
-
+            lbltest.Text = objLand.Hauptstadt.ToString();
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            // ...
         }
     }
 }

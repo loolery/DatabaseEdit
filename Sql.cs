@@ -11,10 +11,12 @@ using System.Windows.Forms;
 namespace Editor
 {
     internal class Sql {
+
         public string sqlfile, connectionString = null;
         public static SQLiteConnection sqldb = null;
         public static SQLiteCommand sqlcmd = null;
         public static SQLiteDataReader sqlreader = null;
+
         public Sql(string sqlfile) {
             string dbfile = AppDomain.CurrentDomain.BaseDirectory + sqlfile;
             if (!File.Exists(sqlfile))
@@ -26,7 +28,7 @@ namespace Editor
                 connectionString = "Data Source=" + dbfile + ";Version=3;";
             }
         }
-        public SQLiteDataReader ReadCmd(string cmd)
+        public SQLiteDataReader SqlSend(string cmd)
         {
             sqldb = new SQLiteConnection(this.connectionString);
             sqldb.Open();
@@ -35,6 +37,7 @@ namespace Editor
             sqlreader = sqlcmd.ExecuteReader();
             return sqlreader;
         }
+
         public void CloseDb()
         {
             sqldb.Close();
