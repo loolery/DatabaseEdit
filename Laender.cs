@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Editor
 {
@@ -43,6 +44,26 @@ namespace Editor
         public string Stadionname { set; get; }
         public int Transfermarktid { set; get; }
         public double Geld { set; get; }
-
+    }
+    public class Spieler
+    {
+        public int Id { get; set; }
+        public int Land_Id { get; set; }
+        public int Verein_Id { get; set; }
+        public int Trikotnr { get; set; }
+        public string Vorname { set; get; }
+        public string Nachname { get; set; }
+        public string Name
+        {
+            set { }
+            get { return Vorname + ' ' + Nachname; }
+        }
+        public string Geburtstag { set; get; }
+        public int Groesse { set; get; }
+        public int Fuss { set; get; }
+        public string Foto { set; get; }
+        public int Technik { set; get; }
+        public int Einsatz { set; get; }
+        public int Schnelligkeit { set; get; }
     }
 }

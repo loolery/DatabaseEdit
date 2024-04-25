@@ -74,6 +74,9 @@
             this.txtboxliganame = new System.Windows.Forms.TextBox();
             this.lblliganame = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtboxvereintransfermarktid = new System.Windows.Forms.TextBox();
+            this.lblvereingeld = new System.Windows.Forms.Label();
+            this.txtboxvereingeld = new System.Windows.Forms.TextBox();
             this.lblvereinstadionname = new System.Windows.Forms.Label();
             this.lblvereinfarben = new System.Windows.Forms.Label();
             this.txtboxvereinstadionname = new System.Windows.Forms.TextBox();
@@ -94,15 +97,41 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.cbovereine = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.cbospieler = new System.Windows.Forms.ComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.lblvereingeld = new System.Windows.Forms.Label();
-            this.txtboxvereingeld = new System.Windows.Forms.TextBox();
-            this.txtboxvereintransfermarktid = new System.Windows.Forms.TextBox();
+            this.lbltest = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.lblspielerschnelligkeit = new System.Windows.Forms.Label();
+            this.lblspielereinsatz = new System.Windows.Forms.Label();
+            this.txtboxspielerschnelligkeit = new System.Windows.Forms.TextBox();
+            this.txtboxspielereinsatz = new System.Windows.Forms.TextBox();
+            this.txtboxspielertechnik = new System.Windows.Forms.TextBox();
+            this.lblspielertechnik = new System.Windows.Forms.Label();
+            this.picboxspielerbild = new System.Windows.Forms.PictureBox();
+            this.txtboxspielertrikotnr = new System.Windows.Forms.TextBox();
+            this.lblspielertrikotnr = new System.Windows.Forms.Label();
+            this.lblspielerbild = new System.Windows.Forms.Label();
+            this.txtboxspielerbild = new System.Windows.Forms.TextBox();
+            this.lblspielerfuss = new System.Windows.Forms.Label();
+            this.lblspielergroesse = new System.Windows.Forms.Label();
+            this.txtboxspielerfuss = new System.Windows.Forms.TextBox();
+            this.txtboxspielergroesse = new System.Windows.Forms.TextBox();
+            this.lblspielervereinid = new System.Windows.Forms.Label();
+            this.txtboxspielervereinid = new System.Windows.Forms.TextBox();
+            this.lblspielerland = new System.Windows.Forms.Label();
+            this.txtboxspielerlandid = new System.Windows.Forms.TextBox();
+            this.lblspielerid = new System.Windows.Forms.Label();
+            this.txtboxspielerid = new System.Windows.Forms.TextBox();
+            this.lblspielergeburtstag = new System.Windows.Forms.Label();
+            this.lblspielernachname = new System.Windows.Forms.Label();
+            this.txtboxspielergeburtstag = new System.Windows.Forms.TextBox();
+            this.txtboxspielernachname = new System.Windows.Forms.TextBox();
+            this.txtboxspielervorname = new System.Windows.Forms.TextBox();
+            this.lblspielervorname = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).BeginInit();
@@ -114,6 +143,9 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxspielerbild)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -181,7 +213,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Länder Daten:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lbllandid
             // 
@@ -333,7 +364,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Länder auswahl:";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // cbolaender
             // 
@@ -353,12 +383,11 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Liga auswahl:";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // cboligen
             // 
             this.cboligen.FormattingEnabled = true;
-            this.cboligen.Location = new System.Drawing.Point(4, 19);
+            this.cboligen.Location = new System.Drawing.Point(6, 19);
             this.cboligen.Name = "cboligen";
             this.cboligen.Size = new System.Drawing.Size(235, 21);
             this.cboligen.TabIndex = 0;
@@ -507,7 +536,7 @@
             // 
             // txtboxliganame
             // 
-            this.txtboxliganame.Location = new System.Drawing.Point(74, 47);
+            this.txtboxliganame.Location = new System.Drawing.Point(73, 47);
             this.txtboxliganame.Name = "txtboxliganame";
             this.txtboxliganame.Size = new System.Drawing.Size(165, 20);
             this.txtboxliganame.TabIndex = 2;
@@ -550,6 +579,33 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Vereins Daten:";
             // 
+            // txtboxvereintransfermarktid
+            // 
+            this.txtboxvereintransfermarktid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxvereintransfermarktid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxvereintransfermarktid.Enabled = false;
+            this.txtboxvereintransfermarktid.Location = new System.Drawing.Point(78, 102);
+            this.txtboxvereintransfermarktid.Name = "txtboxvereintransfermarktid";
+            this.txtboxvereintransfermarktid.ReadOnly = true;
+            this.txtboxvereintransfermarktid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxvereintransfermarktid.TabIndex = 44;
+            // 
+            // lblvereingeld
+            // 
+            this.lblvereingeld.AutoSize = true;
+            this.lblvereingeld.Location = new System.Drawing.Point(7, 269);
+            this.lblvereingeld.Name = "lblvereingeld";
+            this.lblvereingeld.Size = new System.Drawing.Size(32, 13);
+            this.lblvereingeld.TabIndex = 43;
+            this.lblvereingeld.Text = "Geld:";
+            // 
+            // txtboxvereingeld
+            // 
+            this.txtboxvereingeld.Location = new System.Drawing.Point(75, 262);
+            this.txtboxvereingeld.Name = "txtboxvereingeld";
+            this.txtboxvereingeld.Size = new System.Drawing.Size(165, 20);
+            this.txtboxvereingeld.TabIndex = 42;
+            // 
             // lblvereinstadionname
             // 
             this.lblvereinstadionname.AutoSize = true;
@@ -577,7 +633,7 @@
             // 
             // txtboxvereinfarben
             // 
-            this.txtboxvereinfarben.Location = new System.Drawing.Point(76, 210);
+            this.txtboxvereinfarben.Location = new System.Drawing.Point(75, 210);
             this.txtboxvereinfarben.Name = "txtboxvereinfarben";
             this.txtboxvereinfarben.Size = new System.Drawing.Size(165, 20);
             this.txtboxvereinfarben.TabIndex = 38;
@@ -678,7 +734,7 @@
             // 
             // txtboxvereintabellenplatz
             // 
-            this.txtboxvereintabellenplatz.Location = new System.Drawing.Point(76, 158);
+            this.txtboxvereintabellenplatz.Location = new System.Drawing.Point(75, 158);
             this.txtboxvereintabellenplatz.Name = "txtboxvereintabellenplatz";
             this.txtboxvereintabellenplatz.Size = new System.Drawing.Size(165, 20);
             this.txtboxvereintabellenplatz.TabIndex = 20;
@@ -720,22 +776,22 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.checkedListBox1);
+            this.groupBox7.Controls.Add(this.cbospieler);
             this.groupBox7.Location = new System.Drawing.Point(508, 28);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(245, 628);
+            this.groupBox7.Size = new System.Drawing.Size(245, 50);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Spieler auswahl:";
             // 
-            // checkedListBox1
+            // cbospieler
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(6, 18);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(238, 619);
-            this.checkedListBox1.TabIndex = 0;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.cbospieler.FormattingEnabled = true;
+            this.cbospieler.Location = new System.Drawing.Point(6, 19);
+            this.cbospieler.Name = "cbospieler";
+            this.cbospieler.Size = new System.Drawing.Size(235, 21);
+            this.cbospieler.TabIndex = 1;
+            this.cbospieler.SelectedIndexChanged += new System.EventHandler(this.cboxspieler_SelectedIndexChanged);
             // 
             // statusStrip1
             // 
@@ -787,6 +843,7 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.lbltest);
             this.groupBox8.Location = new System.Drawing.Point(758, 27);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(397, 628);
@@ -794,38 +851,295 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Spieler Daten:";
             // 
-            // lblvereingeld
+            // lbltest
             // 
-            this.lblvereingeld.AutoSize = true;
-            this.lblvereingeld.Location = new System.Drawing.Point(7, 269);
-            this.lblvereingeld.Name = "lblvereingeld";
-            this.lblvereingeld.Size = new System.Drawing.Size(32, 13);
-            this.lblvereingeld.TabIndex = 43;
-            this.lblvereingeld.Text = "Geld:";
+            this.lbltest.AutoSize = true;
+            this.lbltest.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltest.Location = new System.Drawing.Point(183, 308);
+            this.lbltest.Name = "lbltest";
+            this.lbltest.Size = new System.Drawing.Size(46, 31);
+            this.lbltest.TabIndex = 44;
+            this.lbltest.Text = "__";
             // 
-            // txtboxvereingeld
+            // groupBox9
             // 
-            this.txtboxvereingeld.Location = new System.Drawing.Point(75, 262);
-            this.txtboxvereingeld.Name = "txtboxvereingeld";
-            this.txtboxvereingeld.Size = new System.Drawing.Size(165, 20);
-            this.txtboxvereingeld.TabIndex = 42;
+            this.groupBox9.Controls.Add(this.lblspielerschnelligkeit);
+            this.groupBox9.Controls.Add(this.lblspielereinsatz);
+            this.groupBox9.Controls.Add(this.txtboxspielerschnelligkeit);
+            this.groupBox9.Controls.Add(this.txtboxspielereinsatz);
+            this.groupBox9.Controls.Add(this.txtboxspielertechnik);
+            this.groupBox9.Controls.Add(this.lblspielertechnik);
+            this.groupBox9.Controls.Add(this.picboxspielerbild);
+            this.groupBox9.Controls.Add(this.txtboxspielertrikotnr);
+            this.groupBox9.Controls.Add(this.lblspielertrikotnr);
+            this.groupBox9.Controls.Add(this.lblspielerbild);
+            this.groupBox9.Controls.Add(this.txtboxspielerbild);
+            this.groupBox9.Controls.Add(this.lblspielerfuss);
+            this.groupBox9.Controls.Add(this.lblspielergroesse);
+            this.groupBox9.Controls.Add(this.txtboxspielerfuss);
+            this.groupBox9.Controls.Add(this.txtboxspielergroesse);
+            this.groupBox9.Controls.Add(this.lblspielervereinid);
+            this.groupBox9.Controls.Add(this.txtboxspielervereinid);
+            this.groupBox9.Controls.Add(this.lblspielerland);
+            this.groupBox9.Controls.Add(this.txtboxspielerlandid);
+            this.groupBox9.Controls.Add(this.lblspielerid);
+            this.groupBox9.Controls.Add(this.txtboxspielerid);
+            this.groupBox9.Controls.Add(this.lblspielergeburtstag);
+            this.groupBox9.Controls.Add(this.lblspielernachname);
+            this.groupBox9.Controls.Add(this.txtboxspielergeburtstag);
+            this.groupBox9.Controls.Add(this.txtboxspielernachname);
+            this.groupBox9.Controls.Add(this.txtboxspielervorname);
+            this.groupBox9.Controls.Add(this.lblspielervorname);
+            this.groupBox9.Location = new System.Drawing.Point(508, 84);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(245, 573);
+            this.groupBox9.TabIndex = 12;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Spieler Daten:";
             // 
-            // txtboxvereintransfermarktid
+            // lblspielerschnelligkeit
             // 
-            this.txtboxvereintransfermarktid.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtboxvereintransfermarktid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtboxvereintransfermarktid.Enabled = false;
-            this.txtboxvereintransfermarktid.Location = new System.Drawing.Point(78, 102);
-            this.txtboxvereintransfermarktid.Name = "txtboxvereintransfermarktid";
-            this.txtboxvereintransfermarktid.ReadOnly = true;
-            this.txtboxvereintransfermarktid.Size = new System.Drawing.Size(38, 20);
-            this.txtboxvereintransfermarktid.TabIndex = 44;
+            this.lblspielerschnelligkeit.AutoSize = true;
+            this.lblspielerschnelligkeit.Location = new System.Drawing.Point(0, 544);
+            this.lblspielerschnelligkeit.Name = "lblspielerschnelligkeit";
+            this.lblspielerschnelligkeit.Size = new System.Drawing.Size(70, 13);
+            this.lblspielerschnelligkeit.TabIndex = 53;
+            this.lblspielerschnelligkeit.Text = "Schnelligkeit:";
+            // 
+            // lblspielereinsatz
+            // 
+            this.lblspielereinsatz.AutoSize = true;
+            this.lblspielereinsatz.Location = new System.Drawing.Point(1, 518);
+            this.lblspielereinsatz.Name = "lblspielereinsatz";
+            this.lblspielereinsatz.Size = new System.Drawing.Size(44, 13);
+            this.lblspielereinsatz.TabIndex = 52;
+            this.lblspielereinsatz.Text = "Einsatz:";
+            // 
+            // txtboxspielerschnelligkeit
+            // 
+            this.txtboxspielerschnelligkeit.Location = new System.Drawing.Point(74, 537);
+            this.txtboxspielerschnelligkeit.Name = "txtboxspielerschnelligkeit";
+            this.txtboxspielerschnelligkeit.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielerschnelligkeit.TabIndex = 51;
+            // 
+            // txtboxspielereinsatz
+            // 
+            this.txtboxspielereinsatz.Location = new System.Drawing.Point(74, 511);
+            this.txtboxspielereinsatz.Name = "txtboxspielereinsatz";
+            this.txtboxspielereinsatz.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielereinsatz.TabIndex = 50;
+            // 
+            // txtboxspielertechnik
+            // 
+            this.txtboxspielertechnik.Location = new System.Drawing.Point(74, 485);
+            this.txtboxspielertechnik.Name = "txtboxspielertechnik";
+            this.txtboxspielertechnik.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielertechnik.TabIndex = 49;
+            // 
+            // lblspielertechnik
+            // 
+            this.lblspielertechnik.AutoSize = true;
+            this.lblspielertechnik.Location = new System.Drawing.Point(1, 492);
+            this.lblspielertechnik.Name = "lblspielertechnik";
+            this.lblspielertechnik.Size = new System.Drawing.Size(49, 13);
+            this.lblspielertechnik.TabIndex = 48;
+            this.lblspielertechnik.Text = "Technik:";
+            // 
+            // picboxspielerbild
+            // 
+            this.picboxspielerbild.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picboxspielerbild.Location = new System.Drawing.Point(75, 257);
+            this.picboxspielerbild.MaximumSize = new System.Drawing.Size(139, 181);
+            this.picboxspielerbild.MinimumSize = new System.Drawing.Size(139, 181);
+            this.picboxspielerbild.Name = "picboxspielerbild";
+            this.picboxspielerbild.Size = new System.Drawing.Size(139, 181);
+            this.picboxspielerbild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picboxspielerbild.TabIndex = 47;
+            this.picboxspielerbild.TabStop = false;
+            // 
+            // txtboxspielertrikotnr
+            // 
+            this.txtboxspielertrikotnr.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxspielertrikotnr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxspielertrikotnr.Enabled = false;
+            this.txtboxspielertrikotnr.Location = new System.Drawing.Point(78, 101);
+            this.txtboxspielertrikotnr.Name = "txtboxspielertrikotnr";
+            this.txtboxspielertrikotnr.ReadOnly = true;
+            this.txtboxspielertrikotnr.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielertrikotnr.TabIndex = 46;
+            // 
+            // lblspielertrikotnr
+            // 
+            this.lblspielertrikotnr.AutoSize = true;
+            this.lblspielertrikotnr.Location = new System.Drawing.Point(4, 108);
+            this.lblspielertrikotnr.Name = "lblspielertrikotnr";
+            this.lblspielertrikotnr.Size = new System.Drawing.Size(54, 13);
+            this.lblspielertrikotnr.TabIndex = 45;
+            this.lblspielertrikotnr.Text = "Trikot Nr.:";
+            // 
+            // lblspielerbild
+            // 
+            this.lblspielerbild.AutoSize = true;
+            this.lblspielerbild.Location = new System.Drawing.Point(7, 451);
+            this.lblspielerbild.Name = "lblspielerbild";
+            this.lblspielerbild.Size = new System.Drawing.Size(31, 13);
+            this.lblspielerbild.TabIndex = 43;
+            this.lblspielerbild.Text = "Foto:";
+            // 
+            // txtboxspielerbild
+            // 
+            this.txtboxspielerbild.Location = new System.Drawing.Point(75, 444);
+            this.txtboxspielerbild.Name = "txtboxspielerbild";
+            this.txtboxspielerbild.Size = new System.Drawing.Size(165, 20);
+            this.txtboxspielerbild.TabIndex = 42;
+            // 
+            // lblspielerfuss
+            // 
+            this.lblspielerfuss.AutoSize = true;
+            this.lblspielerfuss.Location = new System.Drawing.Point(5, 238);
+            this.lblspielerfuss.Name = "lblspielerfuss";
+            this.lblspielerfuss.Size = new System.Drawing.Size(69, 13);
+            this.lblspielerfuss.TabIndex = 41;
+            this.lblspielerfuss.Text = "Starker Fuss:";
+            // 
+            // lblspielergroesse
+            // 
+            this.lblspielergroesse.AutoSize = true;
+            this.lblspielergroesse.Location = new System.Drawing.Point(5, 212);
+            this.lblspielergroesse.Name = "lblspielergroesse";
+            this.lblspielergroesse.Size = new System.Drawing.Size(39, 13);
+            this.lblspielergroesse.TabIndex = 40;
+            this.lblspielergroesse.Text = "Größe:";
+            // 
+            // txtboxspielerfuss
+            // 
+            this.txtboxspielerfuss.Location = new System.Drawing.Point(75, 231);
+            this.txtboxspielerfuss.Name = "txtboxspielerfuss";
+            this.txtboxspielerfuss.Size = new System.Drawing.Size(165, 20);
+            this.txtboxspielerfuss.TabIndex = 39;
+            // 
+            // txtboxspielergroesse
+            // 
+            this.txtboxspielergroesse.Location = new System.Drawing.Point(75, 205);
+            this.txtboxspielergroesse.Name = "txtboxspielergroesse";
+            this.txtboxspielergroesse.Size = new System.Drawing.Size(165, 20);
+            this.txtboxspielergroesse.TabIndex = 38;
+            // 
+            // lblspielervereinid
+            // 
+            this.lblspielervereinid.AutoSize = true;
+            this.lblspielervereinid.Location = new System.Drawing.Point(4, 84);
+            this.lblspielervereinid.Name = "lblspielervereinid";
+            this.lblspielervereinid.Size = new System.Drawing.Size(59, 13);
+            this.lblspielervereinid.TabIndex = 37;
+            this.lblspielervereinid.Text = "Vereins ID:";
+            // 
+            // txtboxspielervereinid
+            // 
+            this.txtboxspielervereinid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxspielervereinid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxspielervereinid.Enabled = false;
+            this.txtboxspielervereinid.Location = new System.Drawing.Point(78, 77);
+            this.txtboxspielervereinid.Name = "txtboxspielervereinid";
+            this.txtboxspielervereinid.ReadOnly = true;
+            this.txtboxspielervereinid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielervereinid.TabIndex = 36;
+            // 
+            // lblspielerland
+            // 
+            this.lblspielerland.AutoSize = true;
+            this.lblspielerland.Location = new System.Drawing.Point(4, 58);
+            this.lblspielerland.Name = "lblspielerland";
+            this.lblspielerland.Size = new System.Drawing.Size(48, 13);
+            this.lblspielerland.TabIndex = 35;
+            this.lblspielerland.Text = "Land ID:";
+            // 
+            // txtboxspielerlandid
+            // 
+            this.txtboxspielerlandid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxspielerlandid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxspielerlandid.Enabled = false;
+            this.txtboxspielerlandid.Location = new System.Drawing.Point(78, 51);
+            this.txtboxspielerlandid.Name = "txtboxspielerlandid";
+            this.txtboxspielerlandid.ReadOnly = true;
+            this.txtboxspielerlandid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielerlandid.TabIndex = 34;
+            // 
+            // lblspielerid
+            // 
+            this.lblspielerid.AutoSize = true;
+            this.lblspielerid.Location = new System.Drawing.Point(8, 32);
+            this.lblspielerid.Name = "lblspielerid";
+            this.lblspielerid.Size = new System.Drawing.Size(21, 13);
+            this.lblspielerid.TabIndex = 33;
+            this.lblspielerid.Text = "ID:";
+            // 
+            // txtboxspielerid
+            // 
+            this.txtboxspielerid.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtboxspielerid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxspielerid.Enabled = false;
+            this.txtboxspielerid.Location = new System.Drawing.Point(78, 25);
+            this.txtboxspielerid.Name = "txtboxspielerid";
+            this.txtboxspielerid.ReadOnly = true;
+            this.txtboxspielerid.Size = new System.Drawing.Size(38, 20);
+            this.txtboxspielerid.TabIndex = 32;
+            // 
+            // lblspielergeburtstag
+            // 
+            this.lblspielergeburtstag.AutoSize = true;
+            this.lblspielergeburtstag.Location = new System.Drawing.Point(5, 186);
+            this.lblspielergeburtstag.Name = "lblspielergeburtstag";
+            this.lblspielergeburtstag.Size = new System.Drawing.Size(62, 13);
+            this.lblspielergeburtstag.TabIndex = 24;
+            this.lblspielergeburtstag.Text = "Geburtstag:";
+            // 
+            // lblspielernachname
+            // 
+            this.lblspielernachname.AutoSize = true;
+            this.lblspielernachname.Location = new System.Drawing.Point(5, 160);
+            this.lblspielernachname.Name = "lblspielernachname";
+            this.lblspielernachname.Size = new System.Drawing.Size(62, 13);
+            this.lblspielernachname.TabIndex = 23;
+            this.lblspielernachname.Text = "Nachname:";
+            // 
+            // txtboxspielergeburtstag
+            // 
+            this.txtboxspielergeburtstag.Location = new System.Drawing.Point(75, 179);
+            this.txtboxspielergeburtstag.Name = "txtboxspielergeburtstag";
+            this.txtboxspielergeburtstag.Size = new System.Drawing.Size(165, 20);
+            this.txtboxspielergeburtstag.TabIndex = 21;
+            // 
+            // txtboxspielernachname
+            // 
+            this.txtboxspielernachname.Location = new System.Drawing.Point(75, 153);
+            this.txtboxspielernachname.Name = "txtboxspielernachname";
+            this.txtboxspielernachname.Size = new System.Drawing.Size(165, 20);
+            this.txtboxspielernachname.TabIndex = 20;
+            // 
+            // txtboxspielervorname
+            // 
+            this.txtboxspielervorname.Location = new System.Drawing.Point(74, 127);
+            this.txtboxspielervorname.Name = "txtboxspielervorname";
+            this.txtboxspielervorname.Size = new System.Drawing.Size(165, 20);
+            this.txtboxspielervorname.TabIndex = 19;
+            this.txtboxspielervorname.TextChanged += new System.EventHandler(this.txtboxspielervorname_TextChanged);
+            // 
+            // lblspielervorname
+            // 
+            this.lblspielervorname.AutoSize = true;
+            this.lblspielervorname.Location = new System.Drawing.Point(7, 134);
+            this.lblspielervorname.Name = "lblspielervorname";
+            this.lblspielervorname.Size = new System.Drawing.Size(52, 13);
+            this.lblspielervorname.TabIndex = 18;
+            this.lblspielervorname.Text = "Vorname:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSave);
@@ -858,6 +1172,11 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxspielerbild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -883,7 +1202,6 @@
         private System.Windows.Forms.ComboBox cbolaender;
         private System.Windows.Forms.ComboBox cboligen;
         private System.Windows.Forms.ComboBox cbovereine;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
         private System.Windows.Forms.TextBox txtboxlandname;
@@ -939,6 +1257,36 @@
         private System.Windows.Forms.Label lblvereingeld;
         private System.Windows.Forms.TextBox txtboxvereingeld;
         private System.Windows.Forms.TextBox txtboxvereintransfermarktid;
+        private System.Windows.Forms.ComboBox cbospieler;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label lblspielerbild;
+        private System.Windows.Forms.TextBox txtboxspielerbild;
+        private System.Windows.Forms.Label lblspielerfuss;
+        private System.Windows.Forms.Label lblspielergroesse;
+        private System.Windows.Forms.TextBox txtboxspielerfuss;
+        private System.Windows.Forms.TextBox txtboxspielergroesse;
+        private System.Windows.Forms.Label lblspielervereinid;
+        private System.Windows.Forms.TextBox txtboxspielervereinid;
+        private System.Windows.Forms.Label lblspielerland;
+        private System.Windows.Forms.TextBox txtboxspielerlandid;
+        private System.Windows.Forms.Label lblspielerid;
+        private System.Windows.Forms.TextBox txtboxspielerid;
+        private System.Windows.Forms.Label lblspielergeburtstag;
+        private System.Windows.Forms.Label lblspielernachname;
+        private System.Windows.Forms.TextBox txtboxspielergeburtstag;
+        private System.Windows.Forms.TextBox txtboxspielernachname;
+        private System.Windows.Forms.TextBox txtboxspielervorname;
+        private System.Windows.Forms.Label lblspielervorname;
+        private System.Windows.Forms.TextBox txtboxspielertrikotnr;
+        private System.Windows.Forms.Label lblspielertrikotnr;
+        private System.Windows.Forms.PictureBox picboxspielerbild;
+        private System.Windows.Forms.Label lblspielerschnelligkeit;
+        private System.Windows.Forms.Label lblspielereinsatz;
+        private System.Windows.Forms.TextBox txtboxspielerschnelligkeit;
+        private System.Windows.Forms.TextBox txtboxspielereinsatz;
+        private System.Windows.Forms.TextBox txtboxspielertechnik;
+        private System.Windows.Forms.Label lblspielertechnik;
+        private System.Windows.Forms.Label lbltest;
     }
 }
 

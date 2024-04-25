@@ -12,92 +12,51 @@ using Microsoft.Data.Sqlite;
 using System.IO;
 using System.Security.Cryptography;
 using System.Diagnostics;
-//using static System.Net.WebRequestMethods;
 using System.Net.NetworkInformation;
 
 namespace Editor
 {
     public partial class Form1 : Form
-    {   
-        // SQLite DB vorbereitungen für die Events
-        public static string dbfile = AppDomain.CurrentDomain.BaseDirectory + "test.db3";
-        public static string connectionString = "Data Source=" + dbfile + ";Version=3;";
-        public static SQLiteConnection sqldb;
-        public static SQLiteCommand sqlcmd = null;
+    {
+        // SQLite DB load
+        Sql sqldbcaller = new Sql("test.db3");
         public static SQLiteDataReader sqlreader = null;
+        // Global Objects load
+        public Laender objLand = new Laender();
 
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
-
         private void btnOpen_Click(object sender, EventArgs e)
-        {
-            if (!File.Exists(dbfile))
-            {
-                MessageBox.Show("Die Datenbank '" + dbfile + "' ist leider nicht vorhanden.");
-            }
-            else
-            {
-                sqldb = new SQLiteConnection(connectionString);
-                sqldb.Open();
-                sqlcmd = sqldb.CreateCommand();
-                sqlcmd.CommandText = "SELECT * FROM tbl_land";
-                sqlreader = sqlcmd.ExecuteReader();
-                List<Laender> laenderauswahl = new List<Laender>();
-                while (sqlreader.Read())
-                {
-                    string tmid;
-                    if (sqlreader["Tm_Id"] is null)
-                    {
-                        tmid = "9999";
-                    }
-                    else
-                    {
-                        tmid = (sqlreader["Tm_Id"].ToString() == null) ? string.Empty : sqlreader["Tm_Id"].ToString();
-                    }
-                    laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3), Hauptstadt = sqlreader.GetString(4), Fahne = sqlreader.GetString(5), FifaPunkte = sqlreader.GetInt32(6), Tm_Id = tmid });
-                }
-                sqldb.Close();
-                cbolaender.DataSource = laenderauswahl;
-                cbolaender.ValueMember = "Id";
-                cbolaender.DisplayMember = "Name";  
-            }
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            // speichert alles
+        {                
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_land");
+            List<Laender> laenderauswahl = new List<Laender>();
+            while (sqlreader.Read())    
+            {    
+                string tmid;    
+                if (sqlreader["Tm_Id"] is null)    
+                {    
+                    tmid = "9999";    
+                }    
+                else    
+                {    
+                    tmid = (sqlreader["Tm_Id"].ToString() == null) ? string.Empty : sqlreader["Tm_Id"].ToString();    
+                }    
+                laenderauswahl.Add(new Laender() { Id = sqlreader.GetInt32(0), Name = sqlreader.GetString(1), Name2 = sqlreader.GetString(2), Einwohner = sqlreader.GetDouble(3), Hauptstadt = sqlreader.GetString(4), Fahne = sqlreader.GetString(5), FifaPunkte = sqlreader.GetInt32(6), Tm_Id = tmid });    
+            }    
+            sqldbcaller.CloseDb();    
+            cbolaender.DataSource = laenderauswahl;    
+            cbolaender.ValueMember = "Id";    
+            cbolaender.DisplayMember = "Name";      
         }
 
         private void cbolaender_SelectedIndexChanged(object sender, EventArgs e)
@@ -115,18 +74,13 @@ namespace Editor
                 txtboxfifapunkte.Text = objLand.FifaPunkte.ToString();
                 txtboxtransfermarktid.Text = objLand.Tm_Id.ToString();
             }
-            sqldb = new SQLiteConnection(connectionString);
-            sqldb.Open();
-            sqlcmd = null;
-            sqlcmd = sqldb.CreateCommand();
-            sqlcmd.CommandText = "SELECT * FROM tbl_ligen WHERE Land_ID = " + objLand.Id.ToString();
-            sqlreader = sqlcmd.ExecuteReader();
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_ligen WHERE Land_ID = " + objLand.Id.ToString());
             List<Ligen> ligenauswahl = new List<Ligen>();
             while (sqlreader.Read())
             {
                 ligenauswahl.Add(new Ligen() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Rang = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Groesse = sqlreader.GetInt32(4), BildURL = sqlreader.GetString(5), Tm_Link = sqlreader.GetString(6), LandURL = objLand.Fahne });
             }
-            sqldb.Close(); 
+            sqldbcaller.CloseDb();
             cboligen.DataSource = ligenauswahl;
             cboligen.ValueMember = "Id";
             cboligen.DisplayMember = "Name";
@@ -148,18 +102,13 @@ namespace Editor
                 txtboxligaland.Text = objLiga.Land_Id.ToString();
                 txtboxligatransfermarktid.Text = objLiga.Tm_Link.ToString();
             }
-            sqldb = new SQLiteConnection(connectionString);
-            sqldb.Open();
-            sqlcmd = null;
-            sqlcmd = sqldb.CreateCommand();
-            sqlcmd.CommandText = "SELECT * FROM tbl_vereine WHERE Liga_ID = " + objLiga.Id.ToString();
-            sqlreader = sqlcmd.ExecuteReader();
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_vereine WHERE Liga_ID = " + objLiga.Id.ToString());
             List<Vereine> vereinsauswahl = new List<Vereine>();
             while (sqlreader.Read())
             {
                 vereinsauswahl.Add(new Vereine() { Id = sqlreader.GetInt32(0), Stadt_Id = sqlreader.GetInt32(1), Liga_Id = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Tabellenplatz = sqlreader.GetInt32(4), Gruendung = sqlreader.GetString(5), Farben = sqlreader.GetString(6), Stadionname = sqlreader.GetString(7), Transfermarktid = sqlreader.GetInt32(8), Geld = sqlreader.GetDouble(9) });
             }
-            sqldb.Close();
+            sqldbcaller.CloseDb();
             cbovereine.DataSource = vereinsauswahl;
             cbovereine.ValueMember = "Id";
             cbovereine.DisplayMember = "Name";
@@ -180,7 +129,46 @@ namespace Editor
                 txtboxvereinstadionname.Text = objVerein.Stadionname.ToString();
                 txtboxvereingeld.Text = objVerein.Geld.ToString();
             }
+            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_personen WHERE Verein_ID = " + objVerein.Id.ToString());
+            List<Spieler> spielerauswahl = new List<Spieler>();
+            while (sqlreader.Read())
+            {
+                spielerauswahl.Add(new Spieler() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Verein_Id = sqlreader.GetInt32(2), Trikotnr = sqlreader.GetInt32(3), Vorname = sqlreader.GetString(4), Nachname = sqlreader.GetString(5), Geburtstag = (string)sqlreader[6], Groesse = sqlreader.GetInt32(7), Fuss = sqlreader.GetInt32(8), Foto = sqlreader.GetString(9), Technik = sqlreader.GetInt32(19), Einsatz = sqlreader.GetInt32(20), Schnelligkeit = sqlreader.GetInt32(21)  });
+            }
+            sqldbcaller.CloseDb();
+            cbospieler.DataSource = spielerauswahl;
+            cbospieler.ValueMember = "Id";
+            cbospieler.DisplayMember = "Name";
         }
 
+        private void cboxspieler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Spieler objSpieler = cbospieler.SelectedItem as Spieler;
+            if (objSpieler != null)
+            {
+                txtboxspielerid.Text = objSpieler.Id.ToString();
+                txtboxspielerlandid.Text = objSpieler.Land_Id.ToString();
+                txtboxspielervereinid.Text = objSpieler.Verein_Id.ToString();
+                txtboxspielertrikotnr.Text = objSpieler.Trikotnr.ToString();
+                txtboxspielervorname.Text = objSpieler.Vorname.ToString();
+                txtboxspielernachname.Text = objSpieler.Nachname.ToString();
+                txtboxspielergeburtstag.Text = objSpieler.Geburtstag.ToString();
+                txtboxspielergroesse.Text = objSpieler.Groesse.ToString();
+                txtboxspielerfuss.Text = objSpieler.Fuss.ToString();
+                picboxspielerbild.Load(objSpieler.Foto.ToString());
+                txtboxspielerbild.Text = objSpieler.Foto.ToString();
+                txtboxspielertechnik.Text = objSpieler.Technik.ToString();
+                txtboxspielereinsatz.Text = objSpieler.Einsatz.ToString();
+                txtboxspielerschnelligkeit.Text = objSpieler.Schnelligkeit.ToString();                
+            }
+        }
+        private void txtboxspielervorname_TextChanged(object sender, EventArgs e)
+        {
+            lbltest.Text = objLand.Hauptstadt.ToString();
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            // ...
+        }
     }
 }
