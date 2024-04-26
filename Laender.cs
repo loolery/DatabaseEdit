@@ -42,6 +42,7 @@ namespace Editor
         public string Gruendung { get; set; }
         public string Farben { set; get; }
         public string Stadionname { set; get; }
+        public int Stadionplaetze { set; get; }
         public int Transfermarktid { set; get; }
         public double Geld { set; get; }
     }
@@ -62,6 +63,7 @@ namespace Editor
         public int Groesse { set; get; }
         public int Fuss { set; get; }
         public string Foto { set; get; }
+        public double Marktwert {  set; get; }
         public int Technik { set; get; }
         public int Einsatz { set; get; }
         public int Schnelligkeit { set; get; }

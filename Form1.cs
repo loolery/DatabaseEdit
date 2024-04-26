@@ -21,8 +21,6 @@ namespace Editor
         // SQLite DB load
         Sql sqldbcaller = new Sql("test.db3");
         public static SQLiteDataReader sqlreader = null;
-        // Global Objects load
-        public Laender objLand = new Laender();
 
         public Form1()
         {
@@ -106,7 +104,7 @@ namespace Editor
             List<Vereine> vereinsauswahl = new List<Vereine>();
             while (sqlreader.Read())
             {
-                vereinsauswahl.Add(new Vereine() { Id = sqlreader.GetInt32(0), Stadt_Id = sqlreader.GetInt32(1), Liga_Id = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Tabellenplatz = sqlreader.GetInt32(4), Gruendung = sqlreader.GetString(5), Farben = sqlreader.GetString(6), Stadionname = sqlreader.GetString(7), Transfermarktid = sqlreader.GetInt32(8), Geld = sqlreader.GetDouble(9) });
+                vereinsauswahl.Add(new Vereine() { Id = sqlreader.GetInt32(0), Stadt_Id = sqlreader.GetInt32(1), Liga_Id = sqlreader.GetInt32(2), Name = sqlreader.GetString(3), Tabellenplatz = sqlreader.GetInt32(4), Gruendung = sqlreader.GetString(5), Farben = sqlreader.GetString(6), Stadionname = sqlreader.GetString(7), Stadionplaetze = sqlreader.GetInt32(8), Transfermarktid = sqlreader.GetInt32(9), Geld = sqlreader.GetDouble(10) });
             }
             sqldbcaller.CloseDb();
             cbovereine.DataSource = vereinsauswahl;
@@ -127,13 +125,14 @@ namespace Editor
                 txtboxvereingruendung.Text = objVerein.Gruendung.ToString();
                 txtboxvereinfarben.Text = objVerein.Farben.ToString();
                 txtboxvereinstadionname.Text = objVerein.Stadionname.ToString();
+                txtboxvereinstadionplaetze.Text = objVerein.Stadionplaetze.ToString();
                 txtboxvereingeld.Text = objVerein.Geld.ToString();
             }
             sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_personen WHERE Verein_ID = " + objVerein.Id.ToString());
             List<Spieler> spielerauswahl = new List<Spieler>();
             while (sqlreader.Read())
             {
-                spielerauswahl.Add(new Spieler() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Verein_Id = sqlreader.GetInt32(2), Trikotnr = sqlreader.GetInt32(3), Vorname = sqlreader.GetString(4), Nachname = sqlreader.GetString(5), Geburtstag = (string)sqlreader[6], Groesse = sqlreader.GetInt32(7), Fuss = sqlreader.GetInt32(8), Foto = sqlreader.GetString(9), Technik = sqlreader.GetInt32(19), Einsatz = sqlreader.GetInt32(20), Schnelligkeit = sqlreader.GetInt32(21)  });
+                spielerauswahl.Add(new Spieler() { Id = sqlreader.GetInt32(0), Land_Id = sqlreader.GetInt32(1), Verein_Id = sqlreader.GetInt32(2), Trikotnr = sqlreader.GetInt32(3), Vorname = sqlreader.GetString(4), Nachname = sqlreader.GetString(5), Geburtstag = (string)sqlreader[6], Groesse = sqlreader.GetInt32(7), Fuss = sqlreader.GetInt32(8), Foto = sqlreader.GetString(9), Marktwert = sqlreader.GetDouble(16), Technik = sqlreader.GetInt32(19), Einsatz = sqlreader.GetInt32(20), Schnelligkeit = sqlreader.GetInt32(21)  });
             }
             sqldbcaller.CloseDb();
             cbospieler.DataSource = spielerauswahl;
@@ -157,6 +156,7 @@ namespace Editor
                 txtboxspielerfuss.Text = objSpieler.Fuss.ToString();
                 picboxspielerbild.Load(objSpieler.Foto.ToString());
                 txtboxspielerbild.Text = objSpieler.Foto.ToString();
+                txtboxspielermarktwert.Text = objSpieler.Marktwert.ToString();
                 txtboxspielertechnik.Text = objSpieler.Technik.ToString();
                 txtboxspielereinsatz.Text = objSpieler.Einsatz.ToString();
                 txtboxspielerschnelligkeit.Text = objSpieler.Schnelligkeit.ToString();                
@@ -164,7 +164,7 @@ namespace Editor
         }
         private void txtboxspielervorname_TextChanged(object sender, EventArgs e)
         {
-            lbltest.Text = objLand.Hauptstadt.ToString();
+            btnSave.Visible = true;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
