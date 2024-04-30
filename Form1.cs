@@ -171,7 +171,7 @@ namespace Editor
         {
             string sqlcmd;
             // Save the countrydata's in db
-            int cid = Convert.ToInt32(txtboxligaid.Text);
+            int cid = Convert.ToInt32(txtboxlandid.Text);
             string cname = txtboxlandname.Text;
             string cname2 = txtboxlandenglish.Text;
             double einwohner = Convert.ToDouble(txtboxlandeinwohner.Text);
@@ -179,10 +179,10 @@ namespace Editor
             string fahne = txtboxlandfahne.Text;
             int fifapunkte = Convert.ToInt32(txtboxlandfifapunkte.Text);
             string ctransfermarktid = txtboxlandtransfermarktid.Text;
-            sqlcmd = "UPDATE tbl_land SET Name = '" + cname + "', Name2 = '" + cname2 + "', Einwohner = " + einwohner + ", Hauptstadt = '" + hauptstadt + "', Fahne = '" + fahne + "', FifaPunkte = " + fifapunkte + ", Tm_Link = '" + ctransfermarktid + "' WHERE ID=" + cid;
+            sqlcmd = "UPDATE tbl_land SET Name = '" + cname + "', Name2 = '" + cname2 + "', Einwohner = " + einwohner + ", Hauptstadt = '" + hauptstadt + "', Fahne = '" + fahne + "', FifaPunkte = " + fifapunkte + ", Tm_Id = " + ctransfermarktid + " WHERE ID=" + cid;
             sqldbcaller.SqlSend(sqlcmd);
             sqlcmd = null;
-            // Save the seasondata's in db
+            //// Save the seasondata's in db
             int lid = Convert.ToInt32(txtboxligaid.Text);
             string sname = txtboxliganame.Text;
             int rang = Convert.ToInt32(txtboxligarang.Text);
@@ -199,10 +199,10 @@ namespace Editor
             int tabellenplatz = Convert.ToInt32(txtboxvereintabellenplatz.Text);
             string gruendung = txtboxvereingruendung.Text;
             string farben = txtboxvereinfarben.Text;
-            string stadion = txtboxspielerfuss.Text;
-            int stadionplaetze = Convert.ToInt32(txtboxspielerbild.Text);
-            int geld = Convert.ToInt32(txtboxspielermarktwert.Text);
-            sqlcmd = "UPDATE tbl_vereine SET Name = '" + tname + "', Tabellenplatz = " + tabellenplatz + ", Gruendung = '" + gruendung + "', Vereinsfarben = " + farben + ", Stadion = " + stadion + ", Stadionplaetze = " + stadionplaetze + ", Geld = " + geld + " WHERE ID="+ tid;
+            string stadion = txtboxvereinstadionname.Text;
+            int stadionplaetze = Convert.ToInt32(txtboxvereinstadionplaetze.Text);
+            int geld = Convert.ToInt32(txtboxvereingeld.Text);
+            sqlcmd = "UPDATE tbl_vereine SET Name = '" + tname + "', Tabellenplatz = " + tabellenplatz + ", Gruendung = '" + gruendung + "', Vereinsfarben = '" + farben + "', Stadion = '" + stadion + "', Stadionplaetze = " + stadionplaetze + ", Geld = " + geld + " WHERE ID=" + tid;
             sqldbcaller.SqlSend(sqlcmd);
             sqlcmd = null;
             // Save the playerdata's in db
@@ -219,8 +219,8 @@ namespace Editor
             int schnelligkeit = Convert.ToInt32(txtboxspielerschnelligkeit.Text);
             sqlcmd = "UPDATE tbl_personen SET Vorname = '" + vorname + "', Nachname = '" + nachname + "', Geburtsdatum = '" + geburtstag + "', Groesse = " + groesse + ", Fuss = " + fuss + ", Foto = '" + bild + "', Marktwert = " + marktwert + ", Technik = " + technik + ", Einsatz = " + einsatz + ", Schnelligkeit = " + schnelligkeit + " WHERE ID=" + pid;
             sqldbcaller.SqlSend(sqlcmd);
+            
             sqldbcaller.CloseDb();
-
             btnSave.Enabled = false;
         }
     }
