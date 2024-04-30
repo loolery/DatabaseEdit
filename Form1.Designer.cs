@@ -106,7 +106,6 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.lblspielerschnelligkeit = new System.Windows.Forms.Label();
-            this.lbltest = new System.Windows.Forms.Label();
             this.lblspielereinsatz = new System.Windows.Forms.Label();
             this.txtboxspielerschnelligkeit = new System.Windows.Forms.TextBox();
             this.lblspielertechnik = new System.Windows.Forms.Label();
@@ -136,6 +135,8 @@
             this.txtboxspielernachname = new System.Windows.Forms.TextBox();
             this.lblspielernachname = new System.Windows.Forms.Label();
             this.txtboxspielergeburtstag = new System.Windows.Forms.TextBox();
+            this.pbarstatusstrip = new System.Windows.Forms.ProgressBar();
+            this.lblstatusstrip = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxfahne)).BeginInit();
@@ -869,7 +870,6 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.lblspielerschnelligkeit);
-            this.groupBox8.Controls.Add(this.lbltest);
             this.groupBox8.Controls.Add(this.lblspielereinsatz);
             this.groupBox8.Controls.Add(this.txtboxspielerschnelligkeit);
             this.groupBox8.Controls.Add(this.lblspielertechnik);
@@ -890,16 +890,6 @@
             this.lblspielerschnelligkeit.Size = new System.Drawing.Size(70, 13);
             this.lblspielerschnelligkeit.TabIndex = 53;
             this.lblspielerschnelligkeit.Text = "Schnelligkeit:";
-            // 
-            // lbltest
-            // 
-            this.lbltest.AutoSize = true;
-            this.lbltest.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltest.Location = new System.Drawing.Point(183, 308);
-            this.lbltest.Name = "lbltest";
-            this.lbltest.Size = new System.Drawing.Size(46, 31);
-            this.lbltest.TabIndex = 44;
-            this.lbltest.Text = "__";
             // 
             // lblspielereinsatz
             // 
@@ -1183,11 +1173,28 @@
             this.txtboxspielergeburtstag.TabIndex = 21;
             this.txtboxspielergeburtstag.TextChanged += new System.EventHandler(this.txtboxspieler_TextChanged);
             // 
+            // pbarstatusstrip
+            // 
+            this.pbarstatusstrip.Location = new System.Drawing.Point(6, 659);
+            this.pbarstatusstrip.Name = "pbarstatusstrip";
+            this.pbarstatusstrip.Size = new System.Drawing.Size(1246, 22);
+            this.pbarstatusstrip.TabIndex = 13;
+            // 
+            // lblstatusstrip
+            // 
+            this.lblstatusstrip.AutoSize = true;
+            this.lblstatusstrip.Location = new System.Drawing.Point(12, 667);
+            this.lblstatusstrip.Name = "lblstatusstrip";
+            this.lblstatusstrip.Size = new System.Drawing.Size(0, 13);
+            this.lblstatusstrip.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblstatusstrip);
+            this.Controls.Add(this.pbarstatusstrip);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.btnOpen);
@@ -1335,11 +1342,12 @@
         private System.Windows.Forms.TextBox txtboxspielereinsatz;
         private System.Windows.Forms.TextBox txtboxspielertechnik;
         private System.Windows.Forms.Label lblspielertechnik;
-        private System.Windows.Forms.Label lbltest;
         private System.Windows.Forms.Label lblvereinstadionplaetze;
         private System.Windows.Forms.TextBox txtboxvereinstadionplaetze;
         private System.Windows.Forms.Label lblspielermarktwert;
         private System.Windows.Forms.TextBox txtboxspielermarktwert;
+        private System.Windows.Forms.ProgressBar pbarstatusstrip;
+        private System.Windows.Forms.Label lblstatusstrip;
     }
 }
 

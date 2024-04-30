@@ -1,19 +1,9 @@
 ﻿using System.Data.SQLite;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
-using System.IO;
-using System.Security.Cryptography;
-using System.Diagnostics;
-using System.Net.NetworkInformation;
-using System.Data.SqlClient;
+
+using System.Threading;
 
 namespace Editor
 {
@@ -22,10 +12,13 @@ namespace Editor
         // SQLite DB load
         Sql sqldbcaller = new Sql("test.db3");
         public static SQLiteDataReader sqlreader = null;
+        public int filecounter = 0;
 
         public Form1()
         {
             InitializeComponent();
+            pbarstatusstrip.Maximum = 100;
+            pbarstatusstrip.Visible = false;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -36,7 +29,10 @@ namespace Editor
             System.Windows.Forms.Application.Exit();
         }
         private void btnOpen_Click(object sender, EventArgs e)
-        {                
+        {
+            filecounter = 0;
+            pbarstatusstrip.Show();
+            pbarstatusstrip.Value = 1;
             sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_land");
             List<Laender> laenderauswahl = new List<Laender>();
             while (sqlreader.Read())    
@@ -55,7 +51,9 @@ namespace Editor
             sqldbcaller.CloseDb();    
             cbolaender.DataSource = laenderauswahl;    
             cbolaender.ValueMember = "Id";    
-            cbolaender.DisplayMember = "Name";      
+            cbolaender.DisplayMember = "Name";
+            Thread.Sleep(50);
+            pbarstatusstrip.Value = 20;
         }
 
         private void cbolaender_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,6 +81,11 @@ namespace Editor
             cboligen.DataSource = ligenauswahl;
             cboligen.ValueMember = "Id";
             cboligen.DisplayMember = "Name";
+            if (filecounter == 0)
+            {
+                Thread.Sleep(50);
+                pbarstatusstrip.Value = 40;
+            }
 
         }
 
@@ -111,6 +114,11 @@ namespace Editor
             cbovereine.DataSource = vereinsauswahl;
             cbovereine.ValueMember = "Id";
             cbovereine.DisplayMember = "Name";
+            if (filecounter == 0)
+            {
+                Thread.Sleep(50);
+                pbarstatusstrip.Value = 60;
+            }
         }
         private void cbovereinsauswahl_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -139,6 +147,11 @@ namespace Editor
             cbospieler.DataSource = spielerauswahl;
             cbospieler.ValueMember = "Id";
             cbospieler.DisplayMember = "Name";
+            if (filecounter == 0)
+            {
+                Thread.Sleep(50);
+                pbarstatusstrip.Value = 80;
+            }
         }
 
         private void cboxspieler_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,7 +173,15 @@ namespace Editor
                 txtboxspielermarktwert.Text = objSpieler.Marktwert.ToString();
                 txtboxspielertechnik.Text = objSpieler.Technik.ToString();
                 txtboxspielereinsatz.Text = objSpieler.Einsatz.ToString();
-                txtboxspielerschnelligkeit.Text = objSpieler.Schnelligkeit.ToString();                
+                txtboxspielerschnelligkeit.Text = objSpieler.Schnelligkeit.ToString();      
+                
+                if(filecounter == 0) 
+                {
+                    pbarstatusstrip.Value = 100;
+                    Thread.Sleep(50);
+                    pbarstatusstrip.Hide();
+                    filecounter += 1;
+                }
             }
         }
         private void txtboxspieler_TextChanged(object sender, EventArgs e)
@@ -223,5 +244,6 @@ namespace Editor
             sqldbcaller.CloseDb();
             btnSave.Enabled = false;
         }
+
     }
 }
