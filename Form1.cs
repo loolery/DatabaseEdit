@@ -159,6 +159,7 @@ namespace Editor
             Spieler objSpieler = cbospieler.SelectedItem as Spieler;
             if (objSpieler != null)
             {
+                
                 txtboxspielerid.Text = objSpieler.Id.ToString();
                 txtboxspielerlandid.Text = objSpieler.Land_Id.ToString();
                 txtboxspielervereinid.Text = objSpieler.Verein_Id.ToString();
@@ -168,8 +169,17 @@ namespace Editor
                 txtboxspielergeburtstag.Text = objSpieler.Geburtstag.ToString();
                 txtboxspielergroesse.Text = objSpieler.Groesse.ToString();
                 txtboxspielerfuss.Text = objSpieler.Fuss.ToString();
-                picboxspielerbild.Load(objSpieler.Foto.ToString());
-                txtboxspielerbild.Text = objSpieler.Foto.ToString();
+                if (objSpieler.Foto.ToString() == "https://i.seadn.io/gae/PTIvyNEFSwpiBA-Kv7ZTRNGzBOOxMzIW59q5vX02Ml911J4_Y5UwfooDhE6oQrULV0M5YODgqWkr6W4o19bxLY2qXCJuDhJ8Y4uObg")
+                {
+                    picboxspielerbild.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picboxspielerbild.Load("https://karriere.ottcomputer.de/images/contact-persons/60586cbd0a28c_nopic.png");
+                    txtboxspielerbild.Text = "https://karriere.ottcomputer.de/images/contact-persons/60586cbd0a28c_nopic.png";
+                } else
+                {
+                    picboxspielerbild.SizeMode = PictureBoxSizeMode.AutoSize;
+                    picboxspielerbild.Load(objSpieler.Foto.ToString());
+                    txtboxspielerbild.Text = objSpieler.Foto.ToString();
+                }
                 txtboxspielermarktwert.Text = objSpieler.Marktwert.ToString();
                 txtboxspielertechnik.Text = objSpieler.Technik.ToString();
                 txtboxspielereinsatz.Text = objSpieler.Einsatz.ToString();
