@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Editor
 {
@@ -33,11 +34,16 @@ namespace Editor
             sqldb = new SQLiteConnection(this.connectionString);
             sqldb.Open();
             sqlcmd = sqldb.CreateCommand();
-            sqlcmd.CommandText = cmd;
+            sqlcmd.CommandText = SQLEscape(cmd);
             sqlreader = sqlcmd.ExecuteReader();
             return sqlreader;
         }
-
+        public static string SQLEscape(string sqlcmd)
+        {
+            // Escape: r, n, x00, x1a, Backslash
+            if (sqlcmd == null) return null;
+            else return Regex.Replace(sqlcmd, @"[rnx00x1a\'""]", @"$0").Replace("EXEC", "");
+        }
         public void CloseDb()
         {
             sqldb.Close();
