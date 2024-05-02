@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace Editor
 {
@@ -196,6 +197,21 @@ namespace Editor
         }
         private void txtboxspieler_TextChanged(object sender, EventArgs e)
         {
+            btnSave.Enabled = true;
+        }
+        private void txtboxOnlyNumbers_TextChanged(object sender, EventArgs e)
+        {
+            TextBox thistxtbox = (TextBox)sender;
+            string content = string.Empty;
+            for (int i = 0; i < thistxtbox.Text.Length; i++)
+            {
+                if (Regex.IsMatch(thistxtbox.Text[i].ToString(), "^[a-zA-Z0-9-]+$"))
+                {
+                    content += thistxtbox.Text[i];
+                }
+            }
+            thistxtbox.Text = content;
+            thistxtbox.SelectionStart = thistxtbox.Text.Length;
             btnSave.Enabled = true;
         }
         private void btnSave_Click(object sender, EventArgs e)

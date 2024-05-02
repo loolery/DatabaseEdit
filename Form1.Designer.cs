@@ -288,6 +288,7 @@
             this.txtboxlandfifapunkte.Name = "txtboxlandfifapunkte";
             this.txtboxlandfifapunkte.Size = new System.Drawing.Size(165, 20);
             this.txtboxlandfifapunkte.TabIndex = 9;
+            this.txtboxlandfifapunkte.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // txtboxlandfahne
             // 
@@ -334,6 +335,7 @@
             this.txtboxlandeinwohner.Name = "txtboxlandeinwohner";
             this.txtboxlandeinwohner.Size = new System.Drawing.Size(165, 20);
             this.txtboxlandeinwohner.TabIndex = 3;
+            this.txtboxlandeinwohner.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // lbllandeinwohner
             // 
@@ -532,6 +534,7 @@
             this.txtboxligagroesse.Name = "txtboxligagroesse";
             this.txtboxligagroesse.Size = new System.Drawing.Size(165, 20);
             this.txtboxligagroesse.TabIndex = 4;
+            this.txtboxligagroesse.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // txtboxligarang
             // 
@@ -539,6 +542,7 @@
             this.txtboxligarang.Name = "txtboxligarang";
             this.txtboxligarang.Size = new System.Drawing.Size(165, 20);
             this.txtboxligarang.TabIndex = 3;
+            this.txtboxligarang.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // txtboxliganame
             // 
@@ -603,6 +607,7 @@
             this.txtboxvereinstadionplaetze.Name = "txtboxvereinstadionplaetze";
             this.txtboxvereinstadionplaetze.Size = new System.Drawing.Size(161, 20);
             this.txtboxvereinstadionplaetze.TabIndex = 45;
+            this.txtboxvereinstadionplaetze.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // txtboxvereintransfermarktid
             // 
@@ -630,6 +635,7 @@
             this.txtboxvereingeld.Name = "txtboxvereingeld";
             this.txtboxvereingeld.Size = new System.Drawing.Size(161, 20);
             this.txtboxvereingeld.TabIndex = 42;
+            this.txtboxvereingeld.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // lblvereinstadionname
             // 
@@ -763,6 +769,7 @@
             this.txtboxvereintabellenplatz.Name = "txtboxvereintabellenplatz";
             this.txtboxvereintabellenplatz.Size = new System.Drawing.Size(161, 20);
             this.txtboxvereintabellenplatz.TabIndex = 20;
+            this.txtboxvereintabellenplatz.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // txtboxvereinname
             // 
@@ -906,6 +913,7 @@
             this.txtboxspielerschnelligkeit.Name = "txtboxspielerschnelligkeit";
             this.txtboxspielerschnelligkeit.Size = new System.Drawing.Size(38, 20);
             this.txtboxspielerschnelligkeit.TabIndex = 51;
+            this.txtboxspielerschnelligkeit.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // lblspielertechnik
             // 
@@ -922,6 +930,7 @@
             this.txtboxspielereinsatz.Name = "txtboxspielereinsatz";
             this.txtboxspielereinsatz.Size = new System.Drawing.Size(38, 20);
             this.txtboxspielereinsatz.TabIndex = 50;
+            this.txtboxspielereinsatz.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // txtboxspielertechnik
             // 
@@ -929,6 +938,7 @@
             this.txtboxspielertechnik.Name = "txtboxspielertechnik";
             this.txtboxspielertechnik.Size = new System.Drawing.Size(38, 20);
             this.txtboxspielertechnik.TabIndex = 49;
+            this.txtboxspielertechnik.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // groupBox9
             // 
@@ -977,7 +987,7 @@
             this.txtboxspielermarktwert.Name = "txtboxspielermarktwert";
             this.txtboxspielermarktwert.Size = new System.Drawing.Size(165, 20);
             this.txtboxspielermarktwert.TabIndex = 48;
-            this.txtboxspielermarktwert.TextChanged += new System.EventHandler(this.txtboxspieler_TextChanged);
+            this.txtboxspielermarktwert.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // picboxspielerbild
             // 
@@ -1092,7 +1102,7 @@
             this.txtboxspielerfuss.Name = "txtboxspielerfuss";
             this.txtboxspielerfuss.Size = new System.Drawing.Size(165, 20);
             this.txtboxspielerfuss.TabIndex = 39;
-            this.txtboxspielerfuss.TextChanged += new System.EventHandler(this.txtboxspieler_TextChanged);
+            this.txtboxspielerfuss.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // lblspielerid
             // 
@@ -1109,7 +1119,7 @@
             this.txtboxspielergroesse.Name = "txtboxspielergroesse";
             this.txtboxspielergroesse.Size = new System.Drawing.Size(165, 20);
             this.txtboxspielergroesse.TabIndex = 38;
-            this.txtboxspielergroesse.TextChanged += new System.EventHandler(this.txtboxspieler_TextChanged);
+            this.txtboxspielergroesse.TextChanged += new System.EventHandler(this.txtboxOnlyNumbers_TextChanged);
             // 
             // lblspielervorname
             // 
