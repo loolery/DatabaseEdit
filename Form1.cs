@@ -34,7 +34,7 @@ namespace Editor
             filecounter = 0;
             pbarstatusstrip.Show();
             pbarstatusstrip.Value = 1;
-            sqlreader = sqldbcaller.SqlSend("SELECT * FROM tbl_land");
+            sqlreader = sqldbcaller.SqlSend("SELECT DISTINCT * FROM tbl_land INNER JOIN (SELECT DISTINCT Land_ID FROM tbl_ligen) AS uniques ON tbl_land.ID = uniques.Land_ID WHERE Tm_Id IS NOT NULL ORDER BY tbl_land.Name ASC;");
             List<Laender> laenderauswahl = new List<Laender>();
             while (sqlreader.Read())    
             {    
